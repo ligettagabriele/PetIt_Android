@@ -4,4 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".primaschermata"/>
+    tools:context=".primaschermata">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="374dp"
+        android:layout_height="505dp"
+        app:srcCompat="@drawable/dog1"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="0dp" />
+</android.support.constraint.ConstraintLayout>
