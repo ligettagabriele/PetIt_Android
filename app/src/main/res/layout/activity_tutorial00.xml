@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tutorial00">
+
+    <ImageView
+        android:id="@+id/imageTutorial00"
+        android:layout_width="match_parent"
+        android:layout_height="468dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/doghelp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioTutorial00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageTutorial00"
+        android:layout_alignStart="@+id/imageTutorial00"
+        android:layout_marginTop="-100dp"
+        android:checked="true" />
+
+    <RadioButton
+        android:id="@+id/radioTutorial01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioTutorial00"
+        android:layout_alignLeft="@+id/radioTutorial00"
+        android:layout_marginLeft="35dp"
+        />
+
+    <RadioButton
+        android:id="@+id/radioTutorial02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioTutorial00"
+        android:layout_alignLeft="@+id/radioTutorial01"
+        android:layout_marginLeft="35dp"/>
+
+
+</RelativeLayout>
