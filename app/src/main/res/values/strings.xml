@@ -15,4 +15,23 @@
     </string>
     <string name="logo">logo</string>
     <string name="title_activity_maps">Map</string>
+
+    <!-- strings per il tutorial-->
+        <string name="activity_tutorials">Tutorial</string>
+        <string name="next">NEXT</string>
+        <string name="skip">SKIP</string>
+        <string name="start">GOT IT</string>
+
+        <string name="tutorial_1_title">cane abbandonato</string>
+        <string name="tutorial_1_desc">cagnolino abbandonato</string>
+
+        <string name="tutorial_2_title">segnalalo</string>
+        <string name="tutorial_2_desc">ti ho già detto cosa fare</string>
+
+        <string name="tutorial_3_title">ora è sulla mappa</string>
+        <string name="tutorial_3_desc">guarda la sua posizione</string>
+
+        <string name="tutorial_4_title">ora è felice</string>
+        <string name="tutorial_4_desc">ha trovato la sua family</string>
+
 </resources>
