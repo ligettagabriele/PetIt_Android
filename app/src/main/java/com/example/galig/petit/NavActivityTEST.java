@@ -31,7 +31,7 @@ public class NavActivityTEST extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
                         break;
                     case R.id.action_menu:
-                        Toast.makeText(NavActivityTEST.this, "Menu", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MenuNavFragment()).commit();
                         break;
                 }
                 return true;
