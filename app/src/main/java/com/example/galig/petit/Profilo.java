@@ -50,11 +50,11 @@ public class Profilo extends Activity {
             startActivity(intent1);
         }
         if (itemId == R.id.MENU3) {
-            Intent intent2 = new Intent(Profilo.this, MainActivity.class);
+            Intent intent2 = new Intent(Profilo.this, Registrazione.class);
             startActivity(intent2);
         }
         if (itemId == R.id.MENU4) {
-            Intent intent2 = new Intent(Profilo.this, Registrazione.class);
+            Intent intent2 = new Intent(Profilo.this, MainActivity.class);
             startActivity(intent2);
         }
         if (itemId == R.id.MENU5) {
