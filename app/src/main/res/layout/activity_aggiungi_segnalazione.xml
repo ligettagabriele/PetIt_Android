@@ -6,27 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".AggiungiSegnalazione">
 
-    <EditText
-        android:id="@+id/nomeSegnalazione"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
 
     <EditText
         android:id="@+id/razza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nomeSegnalazione"
         android:layout_centerHorizontal="true"
         android:ems="15"
         android:inputType="textPersonName"
         android:text="Name" />
 
     <EditText
-        android:id="@+id/stato"
+        android:id="@+id/colorePelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/razza"
@@ -37,10 +28,40 @@
         android:text="Name" />
 
     <EditText
-        android:id="@+id/colorePelo"
+        android:id="@+id/tipoPelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/stato"
+        android:layout_below="@id/colorePelo"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/taglia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipoPelo"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/statoFisico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taglia"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/statoMentale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statoFisico"
         android:layout_centerHorizontal="true"
         android:ems="15"
         android:inputType="textPersonName"
