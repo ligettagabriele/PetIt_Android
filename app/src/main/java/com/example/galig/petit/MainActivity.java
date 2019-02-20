@@ -6,6 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,6 +53,40 @@ public class MainActivity extends Activity {
                 startActivity(registrazione);
             }
         });
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.MENU1) {
+
+            Intent intent0 = new Intent(MainActivity.this, HomePage.class);
+            startActivity(intent0);
+        }
+        if (itemId == R.id.MENU2) {
+            Intent intent1 = new Intent(MainActivity.this, Profilo.class);
+            startActivity(intent1);
+        }
+        if (itemId == R.id.MENU3) {
+            Intent intent2 = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent2);
+        }
+        if (itemId == R.id.MENU4) {
+            Intent intent2 = new Intent(MainActivity.this, Registrazione.class);
+            startActivity(intent2);
+        }
+        if (itemId == R.id.MENU5) {
+            Intent intent2 = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent2);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
