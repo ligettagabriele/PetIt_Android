@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/razza"
             android:padding="10dp"
-            android:text="Razza" />
+            android:text="Tipo di Animale" />
 
         <EditText
             android:id="@+id/razza"
@@ -29,8 +29,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="20dp"
             android:ems="15"
-            android:hint="Razza"
-            android:inputType="textPersonName" />
+            android:hint="Cane, Gatto.. "
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/colorPrimary"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/posizioneTV"
@@ -49,8 +51,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="20dp"
             android:ems="15"
-            android:hint="Posizone"
-            android:inputType="textPersonName" />
+            android:hint="es. via ledita dal naso 3"
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
 
         <!--  <ImageButton
               android:id="@+id/bottone_posizione"
@@ -78,8 +81,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="20dp"
             android:ems="15"
-            android:hint="Colore del pelo"
-            android:inputType="textPersonName" />
+            android:hint="es. sesamo"
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/tipoPeloTV"
@@ -98,8 +102,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="20dp"
             android:ems="15"
-            android:hint="Tipo del pelo"
-            android:inputType="textPersonName" />
+            android:hint="Lungo, Corto..."
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/tagliaTV"
@@ -128,7 +133,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tagliaTV"
             android:layout_marginHorizontal="20dp"
+            android:dropDownSelector="@color/colorPrimary"
             android:entries="@array/taglie" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/statoFisicoTV"
@@ -137,7 +150,8 @@
             android:layout_below="@id/taglia"
             android:layout_alignLeft="@id/colorePelo"
             android:padding="10dp"
-            android:text="Stato fisico" />
+            android:text="Stato fisico"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/optional1"
@@ -158,7 +172,8 @@
             android:layout_marginHorizontal="20dp"
             android:ems="15"
             android:hint="Stato fisico"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/statoMentaleTV"
@@ -187,7 +202,8 @@
             android:layout_marginHorizontal="20dp"
             android:ems="15"
             android:hint="Stato mentale"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
 
         <TextView
             android:id="@+id/infoExtraTV"
@@ -218,7 +234,8 @@
             android:gravity="top|left"
             android:hint="Note"
             android:inputType="textMultiLine|textCapSentences"
-            android:lines="1" />
+            android:lines="1"
+            android:theme="@style/EditText" />
 
 
         <Button
