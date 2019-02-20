@@ -36,7 +36,6 @@
         <activity
             android:name=".AggiungiSegnalazione"
             android:exported="true" />
-        <activity android:name=".Tutorial00" />
         <activity android:name=".button" />
         <activity
             android:name=".MainActivity"
