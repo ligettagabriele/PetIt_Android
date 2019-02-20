@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            android:padding="20dp">
+            android:padding="50dp">
 
             <ImageView
                 android:id="@+id/immagineProfilo"
@@ -63,39 +63,33 @@
 
             <Button
                 android:id="@+id/button1"
+                style="@style/Buttons"
                 android:layout_width="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="40dp"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_margin="10dp"
-                android:padding="40dp"
+                style="@style/Buttons"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_margin="10dp"
-                android:padding="40dp"
+                style="@style/Buttons"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button4"
-                android:layout_margin="10dp"
-                android:padding="40dp"
+                style="@style/Buttons"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button5"
-                android:layout_margin="10dp"
-                android:padding="40dp"
+                style="@style/Buttons"
                 android:text="Button" />
 
             <Button
                 android:id="@+id/button6"
-                android:layout_margin="10dp"
-                android:padding="40dp"
+                style="@style/Buttons"
                 android:text="Button" />
 
         </GridLayout>
