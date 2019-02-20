@@ -1,5 +1,7 @@
 package com.example.galig.petit;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,30 +12,32 @@ import android.widget.Toast;
 
 public class NavActivityTEST extends AppCompatActivity {
 
+    BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
-    bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            switch (menuItem.getItemId())
-            {
-                case R.id.action_add:
-                    Toast.makeText(NavActivityTEST.this, "Add", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.action_mappa:
-                    Toast.makeText(NavActivityTEST.this, "Mappa", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.action_menu:
-                    Toast.makeText(NavActivityTEST.this, "Menu", Toast.LENGTH_SHORT).show();
-                    break;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.action_add:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneFragment()).commit();
+                        break;
+                    case R.id.action_mappa:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                        break;
+                    case R.id.action_menu:
+                        Toast.makeText(NavActivityTEST.this, "Menu", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
             }
-            return true;
-        }
-    });
+        });
+
 
     }
 }
