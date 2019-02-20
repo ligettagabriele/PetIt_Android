@@ -11,6 +11,7 @@
         android:id="@+id/RazzaTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="Razza" />
 
     <EditText
@@ -20,14 +21,15 @@
         android:layout_below="@id/RazzaTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Razza"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/colorePeloTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/razza"
+        android:padding="10dp"
         android:text="Colore del pelo" />
 
     <EditText
@@ -37,14 +39,15 @@
         android:layout_below="@id/colorePeloTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Colore del pelo"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tipoPeloTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/colorePelo"
+        android:padding="10dp"
         android:text="Colore del pelo" />
 
     <EditText
@@ -54,14 +57,15 @@
         android:layout_below="@id/tipoPeloTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Tipo del pelo"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tagliaTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tipoPelo"
+        android:padding="10dp"
         android:text="Taglia" />
 
     <EditText
@@ -71,14 +75,15 @@
         android:layout_below="@id/tagliaTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Taglia"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/statoFisicoTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/taglia"
+        android:padding="10dp"
         android:text="Colore del pelo" />
 
     <EditText
@@ -88,14 +93,15 @@
         android:layout_below="@id/statoFisicoTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Stato fisico"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/statoMentaleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/statoFisico"
+        android:padding="10dp"
         android:text="Colore del pelo" />
 
     <EditText
@@ -105,14 +111,35 @@
         android:layout_below="@id/statoMentaleTV"
         android:layout_centerHorizontal="true"
         android:ems="15"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Stato mentale"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/infoExtraTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statoMentale"
+        android:padding="10dp"
+        android:text="Ulteriori informazioni" />
+
+    <EditText
+        android:id="@+id/infoExtra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoExtraTV"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:gravity="top|left"
+        android:hint="Note"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="3" />
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/statoMentale"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Button" />
