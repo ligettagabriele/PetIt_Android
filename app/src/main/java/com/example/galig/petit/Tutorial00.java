@@ -1,12 +1,9 @@
 package com.example.galig.petit;
 
 import android.app.Activity;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Tutorial00 extends AppCompatActivity {
+public class Tutorial00 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
