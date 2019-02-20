@@ -6,7 +6,7 @@
     </style>
 
     <!-- inherit from the AppCompat theme -->
-    <style name="AppCompatTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- your app branding color for the app bar -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <!-- darker variant for the status bar and contextual app bars -->
