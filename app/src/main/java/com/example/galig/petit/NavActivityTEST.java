@@ -8,12 +8,17 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class NavActivityTEST extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class NavActivityTEST extends AppCompatActivity {
                 return true;
             }
         });
+
+
 
 
     }
