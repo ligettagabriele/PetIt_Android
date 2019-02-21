@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -20,8 +21,8 @@ public class SegnalazioneFragmentTEST extends Fragment implements View.OnClickLi
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.segnalazione_v2, container, false);
-        ImageButton gattoButton = (ImageButton) myView.findViewById(R.id.gatto);
-        ImageButton caneButton = (ImageButton) myView.findViewById(R.id.cane);
+        Button gattoButton = (Button) myView.findViewById(R.id.gatto);
+        Button caneButton = (Button) myView.findViewById(R.id.cane);
 
         gattoButton.setOnClickListener(this);
         caneButton.setOnClickListener(this);
