@@ -30,7 +30,7 @@ public class NavActivityTEST extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.action_add:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneFragmentTEST()).commit();
                         break;
                     case R.id.action_mappa:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
