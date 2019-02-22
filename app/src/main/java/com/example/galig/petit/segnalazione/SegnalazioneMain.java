@@ -1,4 +1,4 @@
-package com.example.galig.petit;
+package com.example.galig.petit.segnalazione;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class SegnalazioneTEST extends Fragment implements View.OnClickListener {
+import com.example.galig.petit.R;
+import com.example.galig.petit.segnalazione.perso.SegnalazionePersoFragment;
+import com.example.galig.petit.segnalazione.trovato.SegnalazioneTrovatoFragment;
+
+public class SegnalazioneMain extends Fragment implements View.OnClickListener {
 
 
     @Nullable
@@ -32,11 +35,11 @@ public class SegnalazioneTEST extends Fragment implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.perso:
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazionePersoFragmentTEST()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazionePersoFragment()).commit();
                 //aggiungere logica per mandare scelta al DB
                 break;
             case R.id.trovato:
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneTrovatoFragmentTEST()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneTrovatoFragment()).commit();
 
                 break;
             default:

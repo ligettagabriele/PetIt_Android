@@ -1,4 +1,4 @@
-package com.example.galig.petit;
+package com.example.galig.petit.segnalazione.perso;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnClickListener {
+import com.example.galig.petit.R;
+import com.example.galig.petit.segnalazione.perso.SegnalazioneCanePerso;
+
+public class SegnalazionePersoFragment extends Fragment implements View.OnClickListener {
 
 
     @Nullable
@@ -32,7 +35,6 @@ public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnCl
 
         switch (v.getId()) {
             case R.id.cane:
-                Toast.makeText(getContext(), "cane", Toast.LENGTH_SHORT).show();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneCanePerso()).commit();
                 //aggiungere logica per mandare scelta al DB
                 break;

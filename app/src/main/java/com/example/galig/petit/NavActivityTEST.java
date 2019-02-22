@@ -7,6 +7,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.example.galig.petit.segnalazione.SegnalazioneMain;
+
 public class NavActivityTEST extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
@@ -27,7 +29,7 @@ public class NavActivityTEST extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.action_add:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneTEST()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneMain()).commit();
                         break;
                     case R.id.action_mappa:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
