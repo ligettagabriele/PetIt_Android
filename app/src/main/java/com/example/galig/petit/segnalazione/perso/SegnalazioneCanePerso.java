@@ -61,7 +61,6 @@ public class SegnalazioneCanePerso extends Fragment implements View.OnClickListe
                 break;
         }
 
-
     }
 
 
