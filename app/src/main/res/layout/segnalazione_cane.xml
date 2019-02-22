@@ -26,6 +26,17 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/sottoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selezione"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="del cane da segnalare"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+
     </RelativeLayout>
 
 

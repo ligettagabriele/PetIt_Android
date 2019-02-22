@@ -23,9 +23,20 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Scegli la specie "
+            android:text="Cosa è successo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/sottoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selezione"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="hai perso o trovato un'animale?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
@@ -64,7 +75,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/cane"
+                    android:id="@+id/perso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -73,7 +84,7 @@
                     android:drawableTop="@drawable/ic_logo"
                     android:drawablePadding="10dp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="Cane"
+                    android:text="Perso"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -100,7 +111,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/gatto"
+                    android:id="@+id/trovato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -109,7 +120,7 @@
                     android:drawableTop="@drawable/ic_logo"
                     android:drawablePadding="10dp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="Gatto"
+                    android:text="Trovato"
                     android:textStyle="bold" />
 
             </LinearLayout>
