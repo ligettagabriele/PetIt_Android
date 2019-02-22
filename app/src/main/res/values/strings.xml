@@ -22,16 +22,16 @@
         <string name="skip">SKIP</string>
         <string name="start">GOT IT</string>
 
-        <string name="tutorial_1_title">cane abbandonato</string>
-        <string name="tutorial_1_desc">cagnolino abbandonato</string>
+        <string name="tutorial_1_title">Un cucciolo è in cerca di aiuto?</string>
+        <string name="tutorial_1_desc">Vuoi aiutarlo ma non sai come fare?</string>
 
-        <string name="tutorial_2_title">segnalalo</string>
-        <string name="tutorial_2_desc">ti ho già detto cosa fare</string>
+        <string name="tutorial_2_title">Hai smarrito il tuo cucciolo?</string>
+        <string name="tutorial_2_desc">Compila il form e segnala lo smarrimento o la posizione di un animale</string>
 
         <string name="tutorial_3_title">ora è sulla mappa</string>
-        <string name="tutorial_3_desc">guarda la sua posizione</string>
+        <string name="tutorial_3_desc">controlla in tempo reale sulla mappa tutti gli avvistamenti della zona</string>
 
-        <string name="tutorial_4_title">ora è felice</string>
-        <string name="tutorial_4_desc">ha trovato la sua family</string>
+        <string name="tutorial_4_title">Aiuta a far ritornare a casa i cuccioli smarriti</string>
+        <string name="tutorial_4_desc"></string>
 
 </resources>
