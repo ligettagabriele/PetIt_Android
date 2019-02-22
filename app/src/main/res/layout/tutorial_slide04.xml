@@ -16,7 +16,7 @@
             android:id="@+id/imageView"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            app:srcCompat="@drawable/tutorial4" />
+            app:srcCompat="@drawable/dogtutorialslide04" />
 
         <TextView
             android:layout_width="wrap_content"
