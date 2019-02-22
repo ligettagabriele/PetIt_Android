@@ -190,9 +190,18 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Modifica impostazioni" />
+                        android:text="Modifica impostazioni"
+                        android:textColor="@android:color/black" />
+
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/gestisci_segnalazioni"
@@ -214,9 +223,17 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Gestisci segnalazioni" />
+                        android:text="Gestisci segnalazioni"
+                        android:textColor="@android:color/black" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/ricerca_segnalazioni"
@@ -238,9 +255,17 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Ricerca segnalazione" />
+                        android:text="Ricerca segnalazione"
+                        android:textColor="@android:color/black" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/messaggi"
@@ -262,9 +287,17 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Messaggi" />
+                        android:text="Messaggi"
+                        android:textColor="@android:color/black" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/aggiorna_profilo"
@@ -286,9 +319,17 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Aggiorna il tuo profilo" />
+                        android:text="Aggiorna il tuo profilo"
+                        android:textColor="@android:color/black" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:id="@+id/altra_impostazione"
@@ -310,7 +351,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Visualizza Qualcosa" />
+                        android:text="Visualizza Qualcosa"
+                        android:textColor="@android:color/black" />
 
                 </LinearLayout>
 
