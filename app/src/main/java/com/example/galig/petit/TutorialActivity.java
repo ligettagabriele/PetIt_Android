@@ -48,7 +48,10 @@ public class TutorialActivity extends Activity {
         btnNext = (Button) findViewById(R.id.btn_next);
 
         layouts = new int[]{
-                R.layout.tutorial_slide01
+                R.layout.tutorial_slide01,
+                R.layout.tutorial_slide02,
+                R.layout.tutorial_slide03,
+                R.layout.tutorial_slide04
         };
 
         addBottomDots(0);
