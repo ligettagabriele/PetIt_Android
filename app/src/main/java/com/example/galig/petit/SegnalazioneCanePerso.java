@@ -10,19 +10,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnClickListener {
-
+public class SegnalazioneCanePerso extends Fragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_animale_smarrito, container, false);
-        Button gattoButton = (Button) myView.findViewById(R.id.gatto);
-        Button caneButton = (Button) myView.findViewById(R.id.cane);
+        View myView = inflater.inflate(R.layout.segnalazione_cane_perso, container, false);
 
-        gattoButton.setOnClickListener(this);
-        caneButton.setOnClickListener(this);
+        Button razza1 = (Button) myView.findViewById(R.id.razza1);
+
+        razza1.setOnClickListener(this);
+
         return myView;
 
     }
@@ -31,13 +30,13 @@ public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnCl
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.cane:
+            case R.id.razza1:
                 Toast.makeText(getContext(), "cane", Toast.LENGTH_SHORT).show();
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneCanePerso()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneFragment()).commit();
                 //aggiungere logica per mandare scelta al DB
                 break;
-            case R.id.gatto:
-                Toast.makeText(getContext(), "gatto", Toast.LENGTH_SHORT).show();
+            case R.id.razza2:
+                Toast.makeText(getContext(), "razza", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;

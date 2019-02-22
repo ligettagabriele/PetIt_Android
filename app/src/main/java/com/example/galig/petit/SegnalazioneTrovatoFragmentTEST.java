@@ -33,7 +33,7 @@ public class SegnalazioneTrovatoFragmentTEST extends Fragment implements View.On
         switch (v.getId()) {
             case R.id.cane:
                 Toast.makeText(getContext(), "cane", Toast.LENGTH_SHORT).show();
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneCane()).commit();
+
                 //aggiungere logica per mandare scelta al DB
                 break;
             case R.id.gatto:

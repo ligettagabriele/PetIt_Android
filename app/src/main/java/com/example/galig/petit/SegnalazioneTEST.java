@@ -36,7 +36,8 @@ public class SegnalazioneTEST extends Fragment implements View.OnClickListener {
                 //aggiungere logica per mandare scelta al DB
                 break;
             case R.id.trovato:
-                Toast.makeText(getContext(), "gatto", Toast.LENGTH_SHORT).show();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneTrovatoFragmentTEST()).commit();
+
                 break;
             default:
                 break;
