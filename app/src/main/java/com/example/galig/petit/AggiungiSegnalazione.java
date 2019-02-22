@@ -2,11 +2,9 @@ package com.example.galig.petit;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,7 +21,7 @@ public class AggiungiSegnalazione extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aggiungi_segnalazione);
+        setContentView(R.layout.form_segnalazione);
 
         final EditText colorePeloET = (EditText) findViewById(R.id.colorePelo);
         final EditText tipoPeloET = (EditText) findViewById(R.id.tipoPelo);

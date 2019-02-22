@@ -13,6 +13,10 @@ public class SegnalazioneFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_aggiungi_segnalazione, container, false);
+
+        View myView = inflater.inflate(R.layout.form_segnalazione, container, false);
+
+        return myView;
+
     }
 }
