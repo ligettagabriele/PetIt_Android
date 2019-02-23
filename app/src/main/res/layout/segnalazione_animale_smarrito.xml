@@ -11,11 +11,14 @@
     tools:context=".AggiungiSegnalazione">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/intestazione"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3.5">
+        android:layout_gravity="center"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/selezione"
@@ -38,97 +41,115 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
-    <GridLayout
-        android:id="@+id/gridLayout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/intestazione"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="3.5"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:padding="14dp">
-
-        <!-- Riga 1 -->
-
-        <!-- Colonna 1 -->
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="7.5"
+        android:gravity="center">
 
         <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor="#F0F0F0"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="1dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="7.5"
+            app:cardCornerRadius="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-                <Button
-                    android:id="@+id/cane"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="@android:color/transparent"
-                    android:drawableTop="@drawable/ic_logo"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="Cane"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.CardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="#F0F0F0">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/cane"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@drawable/ic_logo"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="Cane"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.CardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="#F0F0F0">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/gatto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@drawable/ic_logo"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="Gatto"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
-
-
-        <!-- Colonna 2 -->
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor="#F0F0F0"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="1dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/gatto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="@android:color/transparent"
-                    android:drawableTop="@drawable/ic_logo"
-                    android:drawablePadding="10dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="Gatto"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-    </GridLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
+
+
+
