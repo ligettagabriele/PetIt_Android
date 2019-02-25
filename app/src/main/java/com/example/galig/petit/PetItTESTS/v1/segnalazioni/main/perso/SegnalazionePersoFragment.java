@@ -38,7 +38,8 @@ public class SegnalazionePersoFragment extends Fragment implements View.OnClickL
                 //aggiungere logica per mandare scelta al DB
                 break;
             case R.id.gatto:
-                Toast.makeText(getContext(), "gatto", Toast.LENGTH_SHORT).show();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneGattoPerso()).commit();
+                //aggiungere logica per mandare scelta al DB
                 break;
             default:
                 break;

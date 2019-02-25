@@ -34,10 +34,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".TutorialActivity"/>
+        <activity android:name=".TutorialActivity" />
 
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme"
-            android:label="@string/app_name">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,6 +58,16 @@
         <activity android:name=".Registrazione" />
         <activity
             android:name=".PetItTESTS.v1.NavActivityTEST"
+            android:exported="true"
+            android:theme="@style/AppCompatTheme" />
+
+        <activity
+            android:name=".PetItTESTS.v1.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppCompatTheme" />
+
+        <activity
+            android:name=".PetItTESTS.v1.login.RegistrazioneActivity"
             android:exported="true"
             android:theme="@style/AppCompatTheme" />
 
