@@ -1,4 +1,4 @@
-package com.example.galig.petit.segnalazione.perso;
+package com.example.galig.petit.FreddyJaysTESTS.v1.segnalazioni.main.perso;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.galig.petit.R;
-import com.example.galig.petit.segnalazione.perso.SegnalazioneCanePerso;
 
 public class SegnalazionePersoFragment extends Fragment implements View.OnClickListener {
 

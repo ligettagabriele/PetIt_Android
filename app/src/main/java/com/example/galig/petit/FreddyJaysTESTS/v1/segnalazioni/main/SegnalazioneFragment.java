@@ -1,4 +1,4 @@
-package com.example.galig.petit.segnalazione;
+package com.example.galig.petit.FreddyJaysTESTS.v1.segnalazioni.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,10 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.example.galig.petit.MenuNavFragment;
-import com.example.galig.petit.NavActivityTEST;
 import com.example.galig.petit.R;
 
 public class SegnalazioneFragment extends Fragment implements View.OnClickListener {
