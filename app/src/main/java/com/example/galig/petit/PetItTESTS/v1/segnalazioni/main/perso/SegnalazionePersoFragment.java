@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.galig.petit.R;
 
@@ -19,10 +19,12 @@ public class SegnalazionePersoFragment extends Fragment implements View.OnClickL
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_animale_smarrito, container, false);
+        View myView = inflater.inflate(R.layout.segnalazione_animale, container, false);
         Button gattoButton = (Button) myView.findViewById(R.id.gatto);
         Button caneButton = (Button) myView.findViewById(R.id.cane);
+        TextView sottoText = (TextView) myView.findViewById(R.id.sottoText);
 
+        sottoText.setText("Dell'animale smarrito");
         gattoButton.setOnClickListener(this);
         caneButton.setOnClickListener(this);
         return myView;
