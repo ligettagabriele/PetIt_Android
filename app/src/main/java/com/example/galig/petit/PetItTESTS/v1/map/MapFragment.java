@@ -1,4 +1,4 @@
-package com.example.galig.petit.FreddyJaysTESTS.v1.map;
+package com.example.galig.petit.PetItTESTS.v1.map;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -8,7 +8,7 @@
     android:background="@drawable/sfondo_app"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".FreddyJaysTESTS.v1.segnalazioni.main.AggiungiSegnalazione">
+    tools:context=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione">
 
     <LinearLayout
         android:id="@+id/intestazione"

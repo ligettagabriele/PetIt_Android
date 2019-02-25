@@ -1,4 +1,4 @@
-package com.example.galig.petit.FreddyJaysTESTS.v1.segnalazioni.main;
+package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

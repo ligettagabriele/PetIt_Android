@@ -1,4 +1,4 @@
-package com.example.galig.petit.FreddyJaysTESTS.v1.segnalazioni.main;
+package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.galig.petit.FreddyJaysTESTS.v1.menu.MenuNavFragment;
+import com.example.galig.petit.PetItTESTS.v1.menu.MenuNavFragment;
 import com.example.galig.petit.R;
 
 public class MessaggioFineSegnalazione extends Fragment implements View.OnClickListener {

@@ -34,7 +34,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
         <activity
-            android:name=".FreddyJaysTESTS.v1.segnalazioni.main.AggiungiSegnalazione"
+            android:name=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione"
             android:exported="true" />
         <activity android:name=".button" />
         <activity
@@ -43,7 +43,7 @@
         <activity android:name=".SchermataDisplay" />
         <activity android:name=".Registrazione" />
         <activity
-            android:name=".FreddyJaysTESTS.v1.NavActivityTEST"
+            android:name=".PetItTESTS.v1.NavActivityTEST"
             android:exported="true"
             android:theme="@style/AppCompatTheme" />
 

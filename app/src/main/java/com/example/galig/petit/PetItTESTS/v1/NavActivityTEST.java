@@ -1,4 +1,4 @@
-package com.example.galig.petit.FreddyJaysTESTS.v1;
+package com.example.galig.petit.PetItTESTS.v1;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,9 +7,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.galig.petit.FreddyJaysTESTS.v1.map.MapFragment;
-import com.example.galig.petit.FreddyJaysTESTS.v1.menu.MenuNavFragment;
-import com.example.galig.petit.FreddyJaysTESTS.v1.segnalazioni.main.SegnalazioneMain;
+import com.example.galig.petit.PetItTESTS.v1.map.MapFragment;
+import com.example.galig.petit.PetItTESTS.v1.menu.MenuNavFragment;
+import com.example.galig.petit.PetItTESTS.v1.segnalazioni.main.SegnalazioneMain;
 import com.example.galig.petit.R;
 
 public class NavActivityTEST extends AppCompatActivity {

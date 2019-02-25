@@ -1,4 +1,4 @@
-package com.example.galig.petit.FreddyJaysTESTS.v1.menu;
+package com.example.galig.petit.PetItTESTS.v1.menu;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
