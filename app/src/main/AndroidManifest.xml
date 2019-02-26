@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.galig.petit">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -21,7 +18,7 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".toolbar.ToolBarActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,7 +32,6 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".TutorialActivity" />
-
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
@@ -46,7 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione"
             android:exported="true" />
@@ -60,12 +55,10 @@
             android:name=".PetItTESTS.v1.NavActivityTEST"
             android:exported="true"
             android:theme="@style/AppCompatTheme" />
-
         <activity
             android:name=".PetItTESTS.v1.login.LoginActivity"
             android:exported="true"
             android:theme="@style/AppCompatTheme" />
-
         <activity
             android:name=".PetItTESTS.v1.login.RegistrazioneActivity"
             android:exported="true"
