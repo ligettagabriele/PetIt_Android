@@ -58,15 +58,14 @@
                 android:layout_height="match_parent"
                 android:columnCount="2">
 
-
                 <!-- Row 1 -->
 
                 <!-- Column 1 -->
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -77,13 +76,12 @@
                         android:id="@+id/razza1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/husky"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="Husky"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
@@ -92,8 +90,8 @@
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -104,13 +102,12 @@
                         android:id="@+id/razza2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/cane_topo"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="Chiuaua"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
@@ -121,8 +118,8 @@
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -133,13 +130,12 @@
                         android:id="@+id/razza3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/jack_russel"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="Jack"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
@@ -148,8 +144,8 @@
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -162,11 +158,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/labrador"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="Labrador"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
@@ -177,8 +174,8 @@
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -191,11 +188,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/bulldog_francese"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="French"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
@@ -204,8 +202,8 @@
 
                 <android.support.v7.widget.CardView
                     style="@style/CardViewStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
@@ -218,11 +216,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
                         android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_logo"
+                        android:drawableTop="@drawable/carlino"
                         android:drawablePadding="10dp"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Razza"
+                        android:text="Carlino"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
