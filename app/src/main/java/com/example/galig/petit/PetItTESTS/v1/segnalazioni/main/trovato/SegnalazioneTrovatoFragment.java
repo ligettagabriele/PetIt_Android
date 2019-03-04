@@ -1,4 +1,4 @@
-package com.example.galig.petit;
+package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main.trovato;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,18 +8,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnClickListener {
+import com.example.galig.petit.PetItTESTS.v1.segnalazioni.main.perso.SegnalazioneCanePerso;
+import com.example.galig.petit.R;
+
+public class SegnalazioneTrovatoFragment extends Fragment implements View.OnClickListener {
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_animale_smarrito, container, false);
+        View myView = inflater.inflate(R.layout.segnalazione_animale, container, false);
         Button gattoButton = (Button) myView.findViewById(R.id.gatto);
         Button caneButton = (Button) myView.findViewById(R.id.cane);
+        TextView sottoText = (TextView) myView.findViewById(R.id.sottoText);
+
+        sottoText.setText("Dell'animale trovato");
 
         gattoButton.setOnClickListener(this);
         caneButton.setOnClickListener(this);
@@ -32,12 +39,12 @@ public class SegnalazionePersoFragmentTEST extends Fragment implements View.OnCl
 
         switch (v.getId()) {
             case R.id.cane:
-                Toast.makeText(getContext(), "cane", Toast.LENGTH_SHORT).show();
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneCanePerso()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneCaneTrovato()).commit();
                 //aggiungere logica per mandare scelta al DB
                 break;
             case R.id.gatto:
-                Toast.makeText(getContext(), "gatto", Toast.LENGTH_SHORT).show();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneGattoTrovato()).commit();
+                //aggiungere logica per mandare scelta al DB
                 break;
             default:
                 break;

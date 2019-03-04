@@ -17,21 +17,24 @@
     <string name="title_activity_maps">Map</string>
 
     <!-- strings per il tutorial-->
-        <string name="activity_tutorials">Tutorial</string>
-        <string name="next">NEXT</string>
-        <string name="skip">SKIP</string>
-        <string name="start">GOT IT</string>
+    <string name="activity_tutorials">Tutorial</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 
-        <string name="tutorial_1_title">Un cucciolo è in cerca di aiuto?</string>
-        <string name="tutorial_1_desc">Vuoi aiutarlo ma non sai come fare?</string>
+    <string name="tutorial_1_title">Un cucciolo è in cerca di aiuto?</string>
+    <string name="tutorial_1_desc">Vuoi aiutarlo ma non sai come fare?</string>
 
-        <string name="tutorial_2_title">Hai smarrito il tuo cucciolo?</string>
-        <string name="tutorial_2_desc">Compila il form e segnala lo smarrimento o la posizione di un animale</string>
+    <string name="tutorial_2_title">Hai smarrito il tuo cucciolo?</string>
+    <string name="tutorial_2_desc">Compila il form e segnala lo smarrimento o la posizione di un animale</string>
 
-        <string name="tutorial_3_title">ora è sulla mappa</string>
-        <string name="tutorial_3_desc">controlla in tempo reale sulla mappa tutti gli avvistamenti della zona</string>
+    <string name="tutorial_3_title">ora è sulla mappa</string>
+    <string name="tutorial_3_desc">controlla in tempo reale sulla mappa tutti gli avvistamenti della zona</string>
 
-        <string name="tutorial_4_title">Aiuta a far ritornare a casa i cuccioli smarriti</string>
-        <string name="tutorial_4_desc"></string>
+    <string name="tutorial_4_title">Aiuta a far ritornare a casa i cuccioli smarriti</string>
+    <string name="tutorial_4_desc"></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

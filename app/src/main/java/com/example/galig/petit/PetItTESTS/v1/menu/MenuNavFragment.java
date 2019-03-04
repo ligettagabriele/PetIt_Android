@@ -1,4 +1,4 @@
-package com.example.galig.petit;
+package com.example.galig.petit.PetItTESTS.v1.menu;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,15 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SegnalazioneFragment extends Fragment {
+import com.example.galig.petit.R;
 
+public class MenuNavFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View myView = inflater.inflate(R.layout.form_segnalazione, container, false);
-
-        return myView;
-
+        return inflater.inflate(R.layout.fragment_menupage, container, false);
     }
 }

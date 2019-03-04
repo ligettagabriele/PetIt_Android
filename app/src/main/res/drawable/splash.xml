@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/bg_tutorial2"/>
+
+    <item>
+        <bitmap android:src="@drawable/sfondo"
+            android:gravity="center"/>
+    </item>
+
+
+    <item>
+        <bitmap android:src="@drawable/cat2"
+            android:gravity="center"/>
+
+    </item>
+
+</layer-list>

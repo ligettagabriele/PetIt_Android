@@ -7,7 +7,7 @@
     android:background="@drawable/sfondo_app"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".AggiungiSegnalazione">
+    tools:context=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione">
 
     <RelativeLayout
         android:layout_width="match_parent"

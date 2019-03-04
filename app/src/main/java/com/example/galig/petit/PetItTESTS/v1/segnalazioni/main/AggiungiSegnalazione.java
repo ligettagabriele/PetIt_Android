@@ -1,4 +1,4 @@
-package com.example.galig.petit;
+package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.galig.petit.R;
 
 public class AggiungiSegnalazione extends Activity {
 
