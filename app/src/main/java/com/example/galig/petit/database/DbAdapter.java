@@ -1,7 +1,8 @@
-package database;
+package com.example.galig.petit.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -14,7 +15,7 @@ public class DbAdapter {
     private SQLiteDatabase database;
     private DatabaseHelper dbHelper;
 
-    private static final String DATABASE_TABLE = "segnalazioni";
+    public static final String DATABASE_TABLE = "segnalazioni";
 
     public static final String KEY_ID = "_id";
     public static final String KEY_COLORE_PELO = "colorePelo";
@@ -51,10 +52,17 @@ public class DbAdapter {
         return values;
     }
 
-    private long creaSegnalazione(String colorePelo, String tipoPelo, String taglia,
+    //rimettere private
+    public long creaSegnalazione(String colorePelo, String tipoPelo, String taglia,
                                   String statoFisico, String statoMentale, String note) {
         ContentValues initialValues = createContentValues(colorePelo, tipoPelo, taglia,
                 statoFisico, statoMentale, note);
         return database.insertOrThrow(DATABASE_TABLE, null, initialValues);
     }
+
+    public Cursor fetchAllSegnalazioni() {
+        return database.query(DATABASE_TABLE, new String[]{KEY_COLORE_PELO, KEY_TIPO_PELO, KEY_TAGLIA,
+                KEY_STATO_FISICO, KEY_STATO_MENTALE, KEY_NOTE}, null, null, null, null, null);
+    }
+
 }

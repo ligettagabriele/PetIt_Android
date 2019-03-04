@@ -1,9 +1,11 @@
 package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.galig.petit.R;
+import com.example.galig.petit.database.DbAdapter;
 
 public class SegnalazioneFragment extends Fragment implements View.OnClickListener {
 
@@ -24,12 +27,19 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
     EditText noteAggiuntive;
     Button immettiSegnalazione;
 
+    private DbAdapter dbHelper;
+    private Cursor cursor;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.form_segnalazione, container, false);
+
+        dbHelper = new DbAdapter(getActivity());
+        dbHelper.open();
+        cursor = dbHelper.fetchAllSegnalazioni();
 
         posizione = (EditText) myView.findViewById(R.id.posizione);
         colorePelo = (EditText) myView.findViewById(R.id.colorePelo);
@@ -66,7 +76,9 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
             case R.id.immettiSegnalazione:
                 //implementare logica DB
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
+                long resId = dbHelper.creaSegnalazione(colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
 
+                Log.d("SegnalazioneFragment", "ID = " + resId);
                 break;
             default:
                 break;

@@ -1,6 +1,7 @@
 package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.galig.petit.R;
+import com.example.galig.petit.database.DbAdapter;
 
 public class AggiungiSegnalazione extends Activity {
 
@@ -20,10 +22,18 @@ public class AggiungiSegnalazione extends Activity {
     private String note;
 
 
+    private DbAdapter dbHelper;
+    private Cursor cursor;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_segnalazione);
+
+        dbHelper = new DbAdapter(this);
+        dbHelper.open();
+        cursor = dbHelper.fetchAllSegnalazioni();
 
         final EditText colorePeloET = (EditText) findViewById(R.id.colorePelo);
         final EditText tipoPeloET = (EditText) findViewById(R.id.tipoPelo);
@@ -45,6 +55,10 @@ public class AggiungiSegnalazione extends Activity {
                 statoFisico = statoFisicoET.getText().toString();
                 statoMentale = statoMentaleET.getText().toString();
                 note = noteET.getText().toString();
+
+
+                dbHelper.creaSegnalazione(colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
+
 
                 Toast.makeText(AggiungiSegnalazione.this, taglia, Toast.LENGTH_SHORT).show();
             }
