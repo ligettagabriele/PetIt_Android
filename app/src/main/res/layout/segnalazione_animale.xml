@@ -74,8 +74,8 @@
 
                     <android.support.v7.widget.CardView
                         style="@style/CardViewStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
                         android:layout_margin="16dp"
                         app:cardBackgroundColor="#F0F0F0">
 
@@ -93,7 +93,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentBottom="true"
                                 android:background="@android:color/transparent"
-                                android:drawableTop="@drawable/ic_logo"
+                                android:drawableTop="@drawable/cane_icona"
                                 android:drawablePadding="10dp"
                                 android:fontFamily="sans-serif-smallcaps"
                                 android:text="Cane"
@@ -113,8 +113,8 @@
 
                     <android.support.v7.widget.CardView
                         style="@style/CardViewStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
                         android:layout_margin="16dp"
                         app:cardBackgroundColor="#F0F0F0">
 
@@ -132,7 +132,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentBottom="true"
                                 android:background="@android:color/transparent"
-                                android:drawableTop="@drawable/ic_logo"
+                                android:drawableTop="@drawable/gatto_icona"
                                 android:drawablePadding="10dp"
                                 android:fontFamily="sans-serif-smallcaps"
                                 android:text="Gatto"
