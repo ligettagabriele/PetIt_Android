@@ -4,7 +4,8 @@
     <item android:drawable="@color/bg_tutorial2"/>
 
     <item>
-        <bitmap android:src="@drawable/sfondo"
+        <bitmap android:src="@drawable/sfondocopia"
+
             android:gravity="center"/>
     </item>
 
@@ -13,6 +14,9 @@
         <bitmap android:src="@drawable/cat2"
             android:gravity="center"/>
 
+
     </item>
+
+
 
 </layer-list>
