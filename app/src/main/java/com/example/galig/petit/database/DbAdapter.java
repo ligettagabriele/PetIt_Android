@@ -61,7 +61,7 @@ public class DbAdapter {
     }
 
     public Cursor fetchAllSegnalazioni() {
-        return database.query(DATABASE_TABLE, new String[]{KEY_COLORE_PELO, KEY_TIPO_PELO, KEY_TAGLIA,
+        return database.query(DATABASE_TABLE, new String[]{KEY_ID, KEY_COLORE_PELO, KEY_TIPO_PELO, KEY_TAGLIA,
                 KEY_STATO_FISICO, KEY_STATO_MENTALE, KEY_NOTE}, null, null, null, null, null);
     }
 
