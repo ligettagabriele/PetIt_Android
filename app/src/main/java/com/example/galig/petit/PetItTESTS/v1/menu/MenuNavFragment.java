@@ -52,9 +52,10 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
                 cursor.moveToFirst();
 
                 while (cursor.moveToNext()) {
-                    Integer contactId = cursor.getInt(cursor.getColumnIndex((DbAdapter.KEY_ID)));
+                    Integer segnalazioneID = cursor.getInt(cursor.getColumnIndex((DbAdapter.KEY_ID)));
                     String taglia = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
                     Toast.makeText(getContext(), taglia, Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "contact id = " + segnalazioneID);
                 }
 
                 cursor.close();
