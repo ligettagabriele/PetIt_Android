@@ -121,17 +121,14 @@
                         android:padding="10dp"
                         android:text="Tipo del pelo" />
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/tipoPelo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tipoPeloTV"
-                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tagliaTV"
                         android:layout_marginHorizontal="20dp"
-                        android:ems="15"
-                        android:hint="Lungo, Corto..."
-                        android:inputType="textPersonName"
-                        android:theme="@style/EditText" />
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/tipoPelo" />
 
                     <TextView
                         android:id="@+id/tagliaTV"
@@ -178,17 +175,14 @@
                         android:text="(Optional)" />
 
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/statoFisico"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/statoFisicoTV"
-                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tagliaTV"
                         android:layout_marginHorizontal="20dp"
-                        android:ems="15"
-                        android:hint="Stato fisico"
-                        android:inputType="textPersonName"
-                        android:theme="@style/EditText" />
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/statoFisico" />
 
                     <TextView
                         android:id="@+id/statoMentaleTV"
@@ -203,22 +197,18 @@
                         android:id="@+id/optional2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_above="@id/statoMentale"
                         android:layout_alignRight="@id/statoMentale"
                         android:padding="10dp"
                         android:text="(Optional)" />
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/statoMentale"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/statoMentaleTV"
-                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tagliaTV"
                         android:layout_marginHorizontal="20dp"
-                        android:ems="15"
-                        android:hint="Stato mentale"
-                        android:inputType="textPersonName"
-                        android:theme="@style/EditText" />
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/statoMentale" />
 
                     <TextView
                         android:id="@+id/infoExtraTV"

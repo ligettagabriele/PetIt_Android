@@ -20,10 +20,10 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
 
     EditText posizione;
     EditText colorePelo;
-    EditText tipoPelo;
+    Spinner tipoPelo;
     Spinner taglia;
-    EditText statoFisico;
-    EditText statoMentale;
+    Spinner statoFisico;
+    Spinner statoMentale;
     EditText noteAggiuntive;
     Button immettiSegnalazione;
 
@@ -43,10 +43,10 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
 
         posizione = (EditText) myView.findViewById(R.id.posizione);
         colorePelo = (EditText) myView.findViewById(R.id.colorePelo);
-        tipoPelo = (EditText) myView.findViewById(R.id.tipoPelo);
+        tipoPelo = (Spinner) myView.findViewById(R.id.tipoPelo);
         taglia = (Spinner) myView.findViewById(R.id.taglia);
-        statoFisico = (EditText) myView.findViewById(R.id.statoFisico);
-        statoMentale = (EditText) myView.findViewById(R.id.statoMentale);
+        statoFisico = (Spinner) myView.findViewById(R.id.statoFisico);
+        statoMentale = (Spinner) myView.findViewById(R.id.statoMentale);
         noteAggiuntive = (EditText) myView.findViewById(R.id.infoExtra);
 
         immettiSegnalazione = (Button) myView.findViewById(R.id.immettiSegnalazione);
@@ -63,9 +63,9 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
 
         String posizioneInserita = posizione.getText().toString();
         String colorePeloInserito = colorePelo.getText().toString();
-        String tipoPeloInserito = tipoPelo.getText().toString();
-        String statoFisicoInserito = statoFisico.getText().toString();
-        String statoMentaleInserito = statoMentale.getText().toString();
+        String tipoPeloInserito = tipoPelo.getSelectedItem().toString();
+        String statoFisicoInserito = statoFisico.getSelectedItem().toString();
+        String statoMentaleInserito = statoMentale.getSelectedItem().toString();
         String noteAggiuntiveInserite = noteAggiuntive.getText().toString();
         String tagliaScelta = taglia.getSelectedItem().toString();
 
