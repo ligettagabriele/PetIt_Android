@@ -4,7 +4,7 @@
     <item android:drawable="@color/bg_tutorial2"/>
 
     <item>
-        <bitmap android:src="@drawable/images"
+        <bitmap android:src="@drawable/sfondocopia"
 
             android:gravity="center"/>
     </item>
