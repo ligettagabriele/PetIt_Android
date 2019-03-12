@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.galig.petit.HomePage;
 import com.example.galig.petit.MainActivity;
@@ -35,6 +36,10 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
     private AppCompatEditText confPassword;
     private TextInputLayout confPasswordTextInput;
     private Button registratiButton;
+    private boolean verificaUsername=false;
+    private boolean verificaEmail=false;
+    private boolean verificaPassword=false;
+    private boolean verificaConfPassword=false;
     private static final Pattern PASSWORD_PATTERN= Pattern.compile("^" +
             //"(?=.*[0-9])" +         //at least 1 digit
             //"(?=.*[a-z])" +         //at least 1 lower case letter
@@ -60,6 +65,7 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
         confPasswordTextInput = findViewById(R.id.confpassword_textInput);
         registratiButton = (Button) findViewById(R.id.button_registrati);
 
+
         registratiButton.setOnClickListener(this);
 
         username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -68,10 +74,12 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
                 if(username.getText().toString().isEmpty()) {
                     usernameTextInput.setErrorEnabled(true);
                     usernameTextInput.setError("Inserisci il tuo username");
+                    verificaUsername=false;
                 }
 
                 else {
                     usernameTextInput.setErrorEnabled(false);
+                    verificaUsername=true;
 
                 }
 
@@ -85,14 +93,17 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
                 if(email.getText().toString().isEmpty()) {
                     emailTextInput.setErrorEnabled(true);
                     emailTextInput.setError("Inserisci la tua e-mail");
+                    verificaEmail=false;
                 }
                 else if(!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
                     emailTextInput.setErrorEnabled(true);
                     emailTextInput.setError("Inserisci un indirizzo e-mail valido");
+                    verificaEmail=false;
                 }
 
                 else {
                     emailTextInput.setErrorEnabled(false);
+                    verificaEmail=true;
 
                 }
 
@@ -109,14 +120,17 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
                 if(password.getText().toString().isEmpty()) {
                     passwordTextInput.setErrorEnabled(true);
                     passwordTextInput.setError("Inserisci la password");
+                    verificaPassword=false;
                 }
 
                 else if(!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
                     passwordTextInput.setError("Password non sicura");
+                    verificaPassword=false;
                 }
 
                 else {
                     passwordTextInput.setErrorEnabled(false);
+                    verificaPassword=true;
 
                 }
 
@@ -129,16 +143,19 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
             public void onFocusChange(View v, boolean hasFocus) {
                 if(confPassword.getText().toString().isEmpty()) {
                     confPasswordTextInput.setErrorEnabled(true);
-                    confPasswordTextInput.setError("Conferma la password");
+                    confPasswordTextInput.setError("Inserisci la password");
+                    verificaConfPassword=false;
                 }
 
-                else if(!confPassword.getText().toString().equals(password)){
+                else if(!confPassword.getText().toString().equals(password.getText().toString())){
                     confPasswordTextInput.setErrorEnabled(true);
                     confPasswordTextInput.setError("Le password non coincidono");
+                    verificaConfPassword=false;
                 }
 
                 else {
                     confPasswordTextInput.setErrorEnabled(false);
+                    verificaConfPassword=true;
                 }
 
             }
@@ -150,6 +167,10 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_registrati:
+                if(verificaEmail==true && verificaUsername==true &&
+                        verificaPassword==true && verificaConfPassword==true)
+
+                {
                 SharedPreferences preferences = getSharedPreferences("MYPREFS", Context.MODE_PRIVATE);
                 String nuovoUtente = username.getText().toString();
                 String nuovaEmail = email.getText().toString();
@@ -162,6 +183,11 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
 
                 Intent schermataLogin = new Intent(RegistrazioneActivity.this, NavActivityTEST.class);
                 startActivity(schermataLogin);
+                }
+
+                else {
+                    Toast.makeText(this, "Ricontrollare i campi", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
         }
