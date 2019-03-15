@@ -3,6 +3,7 @@ package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
 
-public class AggiungiSegnalazione extends Activity {
+public class AggiungiSegnalazione extends AppCompatActivity {
 
     private String colorePelo;
     private String tipoPelo;
