@@ -77,7 +77,6 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
                 //implementare logica DB
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
                 long resId = dbHelper.creaSegnalazione(colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
-
                 Log.d("SegnalazioneFragment", "ID = " + resId);
                 break;
             default:
