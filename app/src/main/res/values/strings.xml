@@ -34,6 +34,13 @@
     <string name="tutorial_4_title">Aiuta a far ritornare a casa i cuccioli smarriti</string>
     <string name="tutorial_4_desc"></string>
 
+    <!-- String menù -->
+    <string name="gestisciSegnalazioni">Gestisci Segnalazioni</string>
+    <string name="ricercaSegnalazioni">Ricerca Segnalazione</string>
+    <string name="messaggi">Messaggi</string>
+    <string name="modificaProfilo">Modifica il tuo profilo</string>
+
+
     <!-- String menù impostazioni -->
     <string name="impostazioni">Modifica Impostazioni</string>
     <string name="modifica_nome">Modifica Nome</string>

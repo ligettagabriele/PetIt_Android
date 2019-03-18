@@ -50,105 +50,6 @@
                 android:text="latuaemail@email.com"
                 android:textSize="15dp" />
         </LinearLayout>
-
-        <!--    <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.2"
-                android:gravity="center">
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="15sp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-smallcaps"
-                                android:gravity="center"
-                                android:text="Segnalazioni"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:paddingTop="10dp"
-                                android:text="126"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-smallcaps"
-                                android:gravity="center"
-                                android:text="Elemento"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:paddingTop="10dp"
-                                android:text="34"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-smallcaps"
-                                android:gravity="center"
-                                android:text="Elemento"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="10dp"
-                                android:text="60"
-                                android:textSize="20sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout> -->
     </RelativeLayout>
 
     <LinearLayout
@@ -163,13 +64,13 @@
             app:cardCornerRadius="5dp">
 
             <LinearLayout
+                android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:clickable="true"
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
-                android:clickable="true"
-                android:id="@+id/layout"
                 android:weightSum="6">
 
                 <LinearLayout
@@ -192,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Modifica impostazioni"
+                        android:text="@string/impostazioni"
                         android:textColor="@android:color/black" />
 
 
@@ -225,7 +126,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Gestisci segnalazioni"
+                        android:text="@string/gestisciSegnalazioni"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -257,7 +158,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Ricerca segnalazione"
+                        android:text="@string/ricercaSegnalazioni"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -289,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Messaggi"
+                        android:text="@string/messaggi"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -321,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
                         android:paddingLeft="20dp"
-                        android:text="Aggiorna il tuo profilo"
+                        android:text="@string/modificaProfilo"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
