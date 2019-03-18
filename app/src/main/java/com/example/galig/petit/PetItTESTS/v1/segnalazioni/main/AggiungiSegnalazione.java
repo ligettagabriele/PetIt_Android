@@ -3,6 +3,7 @@ package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
 
-public class AggiungiSegnalazione extends Activity {
+public class AggiungiSegnalazione extends AppCompatActivity {
 
     private String colorePelo;
     private String tipoPelo;
@@ -36,10 +37,10 @@ public class AggiungiSegnalazione extends Activity {
         cursor = dbHelper.fetchAllSegnalazioni();
 
         final EditText colorePeloET = (EditText) findViewById(R.id.colorePelo);
-        final EditText tipoPeloET = (EditText) findViewById(R.id.tipoPelo);
+        final Spinner tipoPeloET = (Spinner) findViewById(R.id.tipoPelo);
         final Spinner tagliaSP = (Spinner) findViewById(R.id.taglia);
-        final EditText statoFisicoET = (EditText) findViewById(R.id.statoFisico);
-        final EditText statoMentaleET = (EditText) findViewById(R.id.statoMentale);
+        final Spinner statoFisicoET = (Spinner) findViewById(R.id.statoFisico);
+        final Spinner statoMentaleET = (Spinner) findViewById(R.id.statoMentale);
         final EditText noteET = (EditText) findViewById(R.id.infoExtra);
         //  ImageButton posizione = (ImageButton) findViewById(R.id.bottone_posizione);
         Button inviaSegnalazione = (Button) findViewById(R.id.immettiSegnalazione);
@@ -50,10 +51,10 @@ public class AggiungiSegnalazione extends Activity {
             public void onClick(View v) {
 
                 colorePelo = colorePeloET.getText().toString();
-                tipoPelo = tipoPeloET.getText().toString();
+                tipoPelo = tipoPeloET.getSelectedItem().toString();
                 taglia = tagliaSP.getSelectedItem().toString();
-                statoFisico = statoFisicoET.getText().toString();
-                statoMentale = statoMentaleET.getText().toString();
+                statoFisico = statoFisicoET.getSelectedItem().toString();
+                statoMentale = statoMentaleET.getSelectedItem().toString();
                 note = noteET.getText().toString();
 
 

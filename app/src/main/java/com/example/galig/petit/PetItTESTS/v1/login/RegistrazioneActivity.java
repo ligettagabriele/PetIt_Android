@@ -25,8 +25,9 @@ import com.example.galig.petit.R;
 
 import java.util.regex.Pattern;
 
-public class RegistrazioneActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegistrazioneActivity extends AppCompatActivity implements View.OnClickListener{
 
+    
     private AppCompatEditText username;
     private TextInputLayout usernameTextInput;
     private AppCompatEditText email;

@@ -1,6 +1,7 @@
-package com.example.galig.petit.PetItTESTS.v1.map;
+package com.example.galig.petit.PetItTESTS.v1.FeedAndMap;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,11 +23,13 @@ public class SegnalazioniFragment extends Fragment {
     MapView mMapView;
     private GoogleMap googleMap;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
-        mMapView = (MapView) rootView.findViewById(R.id.mapView);
+        mMapView = (MapView) rootView.findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
@@ -52,8 +55,10 @@ public class SegnalazioniFragment extends Fragment {
             }
         });
 
+
         return rootView;
     }
+
 
     @Override
     public void onResume() {

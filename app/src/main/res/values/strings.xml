@@ -44,4 +44,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- navigationDrawer aperta o chiusa -->
+    <string name="navigation_open">Navigation open</string>
+    <string name="navigation_close">Navigation close</string>
+
 </resources>
