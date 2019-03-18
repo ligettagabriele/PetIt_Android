@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="inbox"
+            android:id="@+id/inbox_id"
+            android:icon="@drawable/ic_inbox"/>
+
+        <item
+            android:title="invia email"
+            android:id="@+id/send_id"
+            android:icon="@drawable/ic_send_email"/>
+
+    </group>
+
+        <item android:title="altre impostazioni">
+
+            <menu>
+
+                <item
+                    android:title="email archiviate"
+                    android:id="@+id/email_archiviate_id"
+                    android:icon="@drawable/ic_tutte_le_email"/>
+
+                <item
+                    android:title="delete"
+                    android:id="@+id/delete_id"
+                    android:icon="@drawable/ic_delete"/>
+            </menu>
+        </item>
+</menu>
