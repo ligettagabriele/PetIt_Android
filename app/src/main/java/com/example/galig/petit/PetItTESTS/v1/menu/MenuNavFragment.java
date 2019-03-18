@@ -32,10 +32,7 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
 
         modificaImpostazioni.setOnClickListener(this);
 
-
         return myView;
-
-
     }
 
     @Override
@@ -43,8 +40,12 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.modifica_impostazioni:
-                //aggiungere logica per mandare scelta al DB
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModificaImpostazioniFragment()).commit();
+                break;
 
+
+            //aggiungere logica per mandare scelta al DB
+/*
                 dbHelper = new DbAdapter(getContext());
                 dbHelper.open();
                 cursor = dbHelper.fetchAllSegnalazioni();
@@ -60,6 +61,8 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
 
                 cursor.close();
                 dbHelper.close();
+
+                */
 
         }
     }

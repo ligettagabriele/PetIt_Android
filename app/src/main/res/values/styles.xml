@@ -40,11 +40,38 @@
 
     </style>
 
+    <!-- switch -->
+
+    <style name="SwitchStyle" parent="AppCompatTheme">
+        <item name="android:thumb">@drawable/ic_pallina_switch</item>
+        <item name="android:switchTextOff">""</item>
+        <item name="android:switchTextOn">""</item>
+
+    </style>
+
 
     <!--tema splashscreen-->
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!--MENU IMPOSTAZIONI-->
+    <style name="LayoutStyleSettings">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">4</item>
+    </style>
+
+    <style name="TextViewSettingsStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:paddingLeft">40sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
 

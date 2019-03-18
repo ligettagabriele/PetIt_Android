@@ -7,7 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.galig.petit.PetItTESTS.v1.map.MapFragment;
+import com.example.galig.petit.PetItTESTS.v1.map.SegnalazioniFragment;
 import com.example.galig.petit.PetItTESTS.v1.menu.MenuNavFragment;
 import com.example.galig.petit.PetItTESTS.v1.segnalazioni.main.SegnalazioneMain;
 import com.example.galig.petit.R;
@@ -35,7 +35,7 @@ public class NavActivityTEST extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioneMain()).commit();
                         break;
                     case R.id.action_mappa:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SegnalazioniFragment()).commit();
                         break;
                     case R.id.action_menu:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MenuNavFragment()).commit();

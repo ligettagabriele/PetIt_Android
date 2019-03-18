@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapFragment extends Fragment {
+public class SegnalazioniFragment extends Fragment {
 
     MapView mMapView;
     private GoogleMap googleMap;
