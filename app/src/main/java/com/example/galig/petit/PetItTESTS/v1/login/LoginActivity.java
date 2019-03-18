@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         registrati.setOnClickListener(this);
         LoginButton.setOnClickListener(this);
 
-
     }
 
     private void validate(String userName, String userPassword) {

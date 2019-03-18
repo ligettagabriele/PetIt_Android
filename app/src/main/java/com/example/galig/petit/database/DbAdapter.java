@@ -65,4 +65,17 @@ public class DbAdapter {
                 KEY_STATO_FISICO, KEY_STATO_MENTALE, KEY_NOTE}, null, null, null, null, null);
     }
 
+    //update a contact
+    public boolean aggiornaSegnalazione( long segnalazioneID, String colorePelo, String tipoPelo, String taglia,
+                                         String statoFisico, String statoMentale, String note) {
+        ContentValues updateValues = createContentValues(colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
+        return database.update(DATABASE_TABLE, updateValues, KEY_ID + "=" + segnalazioneID,
+                null) > 0;
+    }
+
+    public boolean rimuoviSegnalazione(long segnalazioneID) {
+        return database.delete(DATABASE_TABLE, KEY_ID + "=" + segnalazioneID, null) > 0;
+
+    }
+
 }

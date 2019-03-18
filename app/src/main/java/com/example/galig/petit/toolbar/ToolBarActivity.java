@@ -35,8 +35,7 @@ public class ToolBarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tool_bar);
-        nomeEditText= findViewById(R.id.nome);
+
         nomeTextInput= findViewById(R.id.nome_textInput);
         cognomeEditText= findViewById(R.id.cognome);
         cognomeTextInput= findViewById(R.id.cognome_textInput);
@@ -140,7 +139,7 @@ public class ToolBarActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(passwordEditText.getText().toString().isEmpty()) {
                     passwordTextInput.setErrorEnabled(true);
-                    passwordTextInput.setError("Inserisci il tuo nome");
+                    passwordTextInput.setError("Inserisci la password");
                 }
 
                 else {
@@ -157,7 +156,7 @@ public class ToolBarActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(confpassEditText.getText().toString().isEmpty()) {
                     confpassTextInput.setErrorEnabled(true);
-                    confpassTextInput.setError("Inserisci il tuo nome");
+                    confpassTextInput.setError("Inserisci la password");
                 }
 
                 else {
