@@ -35,7 +35,7 @@
     <string name="tutorial_4_desc"></string>
 
     <!-- String menù impostazioni -->
-    <string name="impostazioni">Settings</string>
+    <string name="impostazioni">Modifica Impostazioni</string>
     <string name="modifica_nome">Modifica Nome</string>
     <string name="modifica_password">Modifica Password</string>
     <string name="attiva_localizzazione">Attiva localizzazione</string>

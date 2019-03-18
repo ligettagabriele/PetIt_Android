@@ -40,7 +40,7 @@ public class FeedAndMapFragment extends Fragment {
                         getFragmentManager().beginTransaction().replace(R.id.containerFragment, new MapFragment()).commit();
                         break;
                     case 1:
-
+                        getFragmentManager().beginTransaction().replace(R.id.containerFragment, new FeedFragment()).commit();
                         break;
                 }
 

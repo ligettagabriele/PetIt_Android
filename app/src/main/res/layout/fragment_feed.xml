@@ -1,90 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/feed"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".PetItTESTS.v1.FeedAndMap.FeedFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/feed"
         android:layout_width="match_parent"
-        android:layout_height="125sp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <ImageView
-            android:id="@+id/immagineSegnalazione"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_weight="2"
-            android:src="@mipmap/ic_launcher_round" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".PetItTESTS.v1.FeedAndMap.FeedFragment">
 
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="15sp"
-                android:text="Segnalazione"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round" />
 
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10sp"
-                android:text="robe a caso che vengono scritte nella segnalazione dagli utenti della nostra applicazione" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="vertical">
 
+                <TextView
+                    style="@style/FeedTextViewNome"
+                    android:text="Nome Segnalazione" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Razza: Abcd" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Posizione: via ledita dal naso 2" />
+
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/darker_gray" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="125sp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <ImageView
-            android:id="@+id/immagineSegnalazione2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_weight="2"
-            android:src="@mipmap/ic_launcher_round" />
-
+        <!-- -->
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="15sp"
-                android:text="Segnalazione"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round" />
 
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10sp"
-                android:text="robe a caso che vengono scritte nella segnalazione dagli utenti della nostra applicazione" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="vertical">
 
+                <TextView
+                    style="@style/FeedTextViewNome"
+                    android:text="Nome Segnalazione" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Razza: Abcd" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Posizione: via ledita dal naso 2" />
+
+
+            </LinearLayout>
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <!-- -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FeedTextViewNome"
+                    android:text="Nome Segnalazione" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Razza: Abcd" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Posizione: via ledita dal naso 2" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FeedTextViewNome"
+                    android:text="Nome Segnalazione" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Razza: Abcd" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Posizione: via ledita dal naso 2" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <!-- -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FeedTextViewNome"
+                    android:text="Nome Segnalazione" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Razza: Abcd" />
+
+                <TextView
+                    style="@style/FeedTextViewDescrizione"
+                    android:text="Posizione: via ledita dal naso 2" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- -->
+
+
     </LinearLayout>
-</LinearLayout>
+
+</ScrollView>
+
