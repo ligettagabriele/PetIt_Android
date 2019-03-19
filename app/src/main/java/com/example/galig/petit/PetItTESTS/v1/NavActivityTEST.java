@@ -1,6 +1,5 @@
 package com.example.galig.petit.PetItTESTS.v1;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,7 +20,7 @@ public class NavActivityTEST extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nav);
+        setContentView(R.layout.petit_activity_nav);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MenuNavFragment()).commit();

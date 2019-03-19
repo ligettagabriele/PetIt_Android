@@ -18,7 +18,7 @@ public class SegnalazioneCaneTrovato extends Fragment implements View.OnClickLis
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_cane, container, false);
+        View myView = inflater.inflate(R.layout.petit_segnalazione_cane, container, false);
 
         Button razza1 = (Button) myView.findViewById(R.id.razza1);
 

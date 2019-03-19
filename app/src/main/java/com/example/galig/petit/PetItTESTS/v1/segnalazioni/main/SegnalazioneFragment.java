@@ -35,7 +35,7 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.form_segnalazione, container, false);
+        View myView = inflater.inflate(R.layout.petit_form_segnalazione, container, false);
 
         dbHelper = new DbAdapter(getActivity());
         dbHelper.open();

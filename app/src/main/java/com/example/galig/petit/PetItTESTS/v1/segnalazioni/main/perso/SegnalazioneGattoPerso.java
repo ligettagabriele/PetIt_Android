@@ -18,7 +18,7 @@ public class SegnalazioneGattoPerso extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_gatto, container, false);
+        View myView = inflater.inflate(R.layout.petit_segnalazione_gatto, container, false);
 
         Button razza1 = (Button) myView.findViewById(R.id.razza1);
 

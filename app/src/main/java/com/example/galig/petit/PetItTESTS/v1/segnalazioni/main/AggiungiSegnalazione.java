@@ -1,6 +1,5 @@
 package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
-import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,7 +29,7 @@ public class AggiungiSegnalazione extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.form_segnalazione);
+        setContentView(R.layout.petit_form_segnalazione);
 
         dbHelper = new DbAdapter(this);
         dbHelper.open();

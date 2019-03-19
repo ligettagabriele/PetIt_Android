@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fontFamily="sans-serif-smallcaps"
+                    android:fontFamily="sans-serif"
                     android:gravity="center"
                     android:text="Grazie per la segnalazione"
                     android:textSize="30sp"
@@ -57,7 +57,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="15dp"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:gravity="top"
                         android:text="Speriamo qualcuno risolva al più presto questa situazione"
                         android:textAlignment="center"
@@ -76,7 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:gravity="center"
                         android:text="ritorna al menù" />
 

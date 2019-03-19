@@ -18,7 +18,7 @@ public class MessaggioFineSegnalazione extends Fragment implements View.OnClickL
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.messaggio_fine_segnalazione, container, false);
+        View myView = inflater.inflate(R.layout.petit_messaggio_fine_segnalazione, container, false);
 
         Button button = (Button) myView.findViewById(R.id.ritorna_menu);
 

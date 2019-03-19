@@ -25,8 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Scegli la specie "
+            android:fontFamily="sans-serif"
+            android:text="Cosa è successo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="30sp" />
 
@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/selezione"
             android:layout_centerInParent="true"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text=""
+            android:fontFamily="sans-serif"
+            android:text="hai perso o trovato un'animale?"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp" />
 
@@ -66,11 +66,13 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center">
+
 
                     <android.support.v7.widget.CardView
                         style="@style/CardViewStyle"
@@ -87,23 +89,22 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/cane"
+                                android:id="@+id/perso"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentBottom="true"
                                 android:background="@android:color/transparent"
-                                android:drawableTop="@drawable/cane_icona"
+                                android:drawableTop="@drawable/sad_dog"
                                 android:drawablePadding="10dp"
-                                android:fontFamily="sans-serif-smallcaps"
-                                android:text="Cane"
+                                android:fontFamily="sans-serif"
+                                android:text="Perso"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
 
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -113,8 +114,8 @@
 
                     <android.support.v7.widget.CardView
                         style="@style/CardViewStyle"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         app:cardBackgroundColor="#F0F0F0">
 
@@ -126,30 +127,31 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/gatto"
+                                android:id="@+id/trovato"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentBottom="true"
                                 android:background="@android:color/transparent"
-                                android:drawableTop="@drawable/gatto_icona"
+                                android:drawableTop="@drawable/happy_dog"
                                 android:drawablePadding="10dp"
-                                android:fontFamily="sans-serif-smallcaps"
-                                android:text="Gatto"
+                                android:fontFamily="sans-serif"
+                                android:text="Trovato"
+                                android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
                                 android:textStyle="bold" />
 
+
                         </LinearLayout>
-
-
                     </android.support.v7.widget.CardView>
+
                 </LinearLayout>
+
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
 
 </LinearLayout>
-
-
-

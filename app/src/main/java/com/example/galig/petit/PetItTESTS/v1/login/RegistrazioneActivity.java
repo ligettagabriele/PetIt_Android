@@ -1,6 +1,5 @@
 package com.example.galig.petit.PetItTESTS.v1.login;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,18 +8,11 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatEditText;
 import android.util.Patterns;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.galig.petit.HomePage;
-import com.example.galig.petit.MainActivity;
 import com.example.galig.petit.PetItTESTS.v1.NavActivityTEST;
-import com.example.galig.petit.Profilo;
 import com.example.galig.petit.R;
 
 import java.util.regex.Pattern;
@@ -54,7 +46,7 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrazione);
+        setContentView(R.layout.petit_registrazione);
 
         username =  findViewById(R.id.username);
         usernameTextInput= findViewById(R.id.username_textInput);

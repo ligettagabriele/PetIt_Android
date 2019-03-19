@@ -5,18 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
-
-import static android.support.constraint.Constraints.TAG;
 
 public class MenuNavFragment extends Fragment implements View.OnClickListener {
 
@@ -26,7 +22,7 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View myView = inflater.inflate(R.layout.fragment_menupage, container, false);
+        View myView = inflater.inflate(R.layout.petit_fragment_menupage, container, false);
 
         LinearLayout modificaImpostazioni = (LinearLayout) myView.findViewById(R.id.modifica_impostazioni);
 

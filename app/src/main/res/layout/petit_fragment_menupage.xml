@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="6dp"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="sans-serif"
                 android:text="Nome Utente"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="21sp" />
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="sans-serif"
                 android:text="latuaemail@email.com"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -91,7 +91,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="@string/impostazioni"
                         android:textColor="@android:color/black" />
@@ -124,7 +124,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="@string/gestisciSegnalazioni"
                         android:textColor="@android:color/black" />
@@ -156,7 +156,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="@string/ricercaSegnalazioni"
                         android:textColor="@android:color/black" />
@@ -188,7 +188,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="@string/messaggi"
                         android:textColor="@android:color/black" />
@@ -220,7 +220,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="@string/modificaProfilo"
                         android:textColor="@android:color/black" />
@@ -252,7 +252,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-smallcaps"
+                        android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
                         android:text="Visualizza Qualcosa"
                         android:textColor="@android:color/black" />

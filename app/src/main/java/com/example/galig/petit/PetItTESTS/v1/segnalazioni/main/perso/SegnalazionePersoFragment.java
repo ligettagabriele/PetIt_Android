@@ -19,7 +19,7 @@ public class SegnalazionePersoFragment extends Fragment implements View.OnClickL
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View myView = inflater.inflate(R.layout.segnalazione_animale, container, false);
+        View myView = inflater.inflate(R.layout.petit_segnalazione_animale, container, false);
         Button gattoButton = (Button) myView.findViewById(R.id.gatto);
         Button caneButton = (Button) myView.findViewById(R.id.cane);
         TextView sottoText = (TextView) myView.findViewById(R.id.sottoText);

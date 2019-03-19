@@ -15,7 +15,7 @@ public class ModificaImpostazioniFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View myView = inflater.inflate(R.layout.fragment_modifica_impostazioni, container, false);
+        View myView = inflater.inflate(R.layout.petit_fragment_modifica_impostazioni, container, false);
 
         return myView;
     }

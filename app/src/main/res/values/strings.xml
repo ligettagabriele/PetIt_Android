@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PetIt</string>
+    <string name="app_name">Pet-It</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -15,6 +15,11 @@
     </string>
     <string name="logo">logo</string>
     <string name="title_activity_maps">Map</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register_message">Non sei registrato?</string>
+    <string name="registrati">Registrati</string>
 
     <!-- strings per il tutorial-->
     <string name="activity_tutorials">Tutorial</string>

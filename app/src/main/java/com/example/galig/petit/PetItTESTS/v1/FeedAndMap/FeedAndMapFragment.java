@@ -18,7 +18,7 @@ public class FeedAndMapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        View rootView = inflater.inflate(R.layout.fragment_main_feed_and_map, container, false);
+        View rootView = inflater.inflate(R.layout.petit_tabview_feed_and_map, container, false);
 
         tabLayout = (TabLayout) rootView.findViewById(R.id.TabLayout);
 
