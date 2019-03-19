@@ -17,9 +17,11 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".toolbar.ToolBarActivity" />
+        <activity
+            android:name=".toolbar.ToolBarActivity"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -45,28 +47,34 @@
         </activity>
         <activity
             android:name=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity android:name=".button" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity android:name=".SchermataDisplay" />
         <activity android:name=".Registrazione" />
         <activity
             android:name=".PetItTESTS.v1.NavActivityTEST"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".PetItTESTS.v1.login.LoginActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".PetItTESTS.v1.login.RegistrazioneActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".PetItTESTS.v1.segnalazioni.main.perso.ListaSegnalazioni"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".NavigationDrawerActivity"
