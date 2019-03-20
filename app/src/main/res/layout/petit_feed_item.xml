@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/feed_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15sp"
+        android:layout_weight="1"
+        android:contentDescription="immagine segnalazione"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/nome_segnalazione"
+        style="@style/FeedTextViewNome"
+        android:layout_alignTop="@id/feed_image"
+        android:layout_marginLeft="13sp"
+        android:layout_toRightOf="@id/feed_image"
+        android:text="Nome Segnalazione" />
+
+    <TextView
+        android:id="@+id/razza_segnalazione"
+        style="@style/FeedTextViewDescrizione"
+        android:layout_below="@id/nome_segnalazione"
+        android:layout_marginLeft="13sp"
+        android:layout_toRightOf="@id/feed_image"
+        android:text="Razza: Abcd" />
+
+    <TextView
+        android:id="@+id/posizione_segnalazione"
+        style="@style/FeedTextViewDescrizione"
+        android:layout_below="@id/razza_segnalazione"
+        android:layout_marginLeft="13sp"
+        android:layout_toRightOf="@id/feed_image"
+        android:text="Posizione: via ledita dal naso 2" />
+
+    <!-- Freccia -->
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow" />
+
+    <!-- Linea divisoria -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/posizione_segnalazione"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="13dp"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>
