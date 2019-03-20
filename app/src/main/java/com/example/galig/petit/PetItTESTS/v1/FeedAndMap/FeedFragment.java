@@ -1,5 +1,6 @@
 package com.example.galig.petit.PetItTESTS.v1.FeedAndMap;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.galig.petit.PetItTESTS.v1.NavActivityTEST;
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
 
@@ -41,6 +44,14 @@ public class FeedFragment extends Fragment {
 
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), ElementoFeedAperto.class);
+                startActivity(intent);
+            }
+        });
 
         /*
 

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo_app"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/feed_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="immagine segnalazione"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/nome_segnalazione"
+            style="@style/FeedTextViewNome"
+            android:text="Nome Segnalazione" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.4"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!-- Razza -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5">
+
+                            <TextView
+                                android:id="@+id/razza"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginLeft="13sp"
+                                android:text="Razza: "
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5">
+
+                            <TextView
+                                android:id="@+id/razza_segnalazione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_toRightOf="@id/razza"
+                                android:text="Razza" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/posizione_segnalazione"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <!-- Posizione -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5">
+
+                            <TextView
+                                android:id="@+id/posizione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginLeft="13sp"
+
+                                android:text="Posizione: "
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5">
+
+                            <TextView
+                                android:id="@+id/posizione_segnalazione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:text="via moscova 2" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/posizione_segnalazione"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Colore Pelo -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5">
+
+                            <TextView
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginLeft="13sp"
+                                android:text="Pelo: "
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5">
+
+                            <TextView
+                                android:id="@+id/pelo_segnalazione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:text="Corto" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/posizione_segnalazione"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <!-- Colore -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5">
+
+                            <TextView
+                                android:id="@+id/colore"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginLeft="13sp"
+
+                                android:text="Colore: "
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5">
+
+                            <TextView
+                                android:id="@+id/colore_segnalazione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:text="Marrone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/posizione_segnalazione"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <!-- Info -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5">
+
+                            <TextView
+                                android:id="@+id/informazioni"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginLeft="13sp"
+                                android:text="Info: "
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7.5"
+                            android:orientation="horizontal"
+                            android:paddingRight="10sp">
+
+                            <TextView
+                                android:id="@+id/informazioni_segnalazione"
+                                style="@style/FeedTextViewDescrizione"
+                                android:layout_marginRight="3sp"
+                                android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. " />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/posizione_segnalazione"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@android:color/darker_gray" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>
