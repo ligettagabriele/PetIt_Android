@@ -54,7 +54,7 @@ public class DbAdapter {
 
     //rimettere private
     public long creaSegnalazione(String colorePelo, String tipoPelo, String taglia,
-                                  String statoFisico, String statoMentale, String note) {
+                                 String statoFisico, String statoMentale, String note) {
         ContentValues initialValues = createContentValues(colorePelo, tipoPelo, taglia,
                 statoFisico, statoMentale, note);
         return database.insertOrThrow(DATABASE_TABLE, null, initialValues);
@@ -66,8 +66,8 @@ public class DbAdapter {
     }
 
     //update a contact
-    public boolean aggiornaSegnalazione( long segnalazioneID, String colorePelo, String tipoPelo, String taglia,
-                                         String statoFisico, String statoMentale, String note) {
+    public boolean aggiornaSegnalazione(long segnalazioneID, String colorePelo, String tipoPelo, String taglia,
+                                        String statoFisico, String statoMentale, String note) {
         ContentValues updateValues = createContentValues(colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
         return database.update(DATABASE_TABLE, updateValues, KEY_ID + "=" + segnalazioneID,
                 null) > 0;
