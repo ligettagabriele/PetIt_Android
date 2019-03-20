@@ -1,4 +1,4 @@
-package com.example.galig.petit.PetItTESTS.v1.FeedAndMap;
+package com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView;
 
 import android.content.Context;
 import android.view.LayoutInflater;

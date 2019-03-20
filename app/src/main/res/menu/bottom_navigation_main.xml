@@ -24,8 +24,8 @@
         android:id="@+id/action_mappa"
         android:enabled="true"
         android:fontFamily="sans-serif-smallcaps"
-        android:icon="@drawable/ic_mappa"
-        android:title="Mappa"
+        android:icon="@drawable/ic_logo"
+        android:title="Segnalazioni"
         app:showAsAction="ifRoom" />
 
 

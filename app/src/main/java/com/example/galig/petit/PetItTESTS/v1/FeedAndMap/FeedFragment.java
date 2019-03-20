@@ -4,22 +4,22 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.galig.petit.PetItTESTS.v1.NavActivityTEST;
+import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView.CustomAdapter;
+import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView.ElementoFeedAperto;
+import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView.ElementoLista;
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import static android.support.constraint.Constraints.TAG;
+import static android.os.Build.ID;
 
 public class FeedFragment extends Fragment {
 
@@ -28,19 +28,22 @@ public class FeedFragment extends Fragment {
     private ListView listView;
     private CustomAdapter customAdapter;
 
+    private static List<ElementoLista> list = new LinkedList<ElementoLista>();
+
+    static {
+        list.add(new ElementoLista("Cagnolino Disperso", "Pincher", "via abc 23"));
+        list.add(new ElementoLista("Gatto trovato", "Persiano", "corso lodi 12"));
+        list.add(new ElementoLista("Ho visto un cane", "Bassotto", "corso sempione 132"));
+        list.add(new ElementoLista("Perso il mio gatto", "incrocio", "via moscova 23"));
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.petit_fragment_feed, container, false);
 
         listView = rootView.findViewById(R.id.feed_list);
-
-        List<ElementoLista> list = new LinkedList<ElementoLista>();
-
-        list.add(new ElementoLista("Cagnolino Disperso", "Pincher", "Posizione"));
-        list.add(new ElementoLista("Gatto trovato", "Persiano", "Posizione"));
-        list.add(new ElementoLista("Ho visto un cane", "Bassotto", "Posizione"));
-        list.add(new ElementoLista("Perso il mio gatto", "incrocio", "Posizione"));
 
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
@@ -49,6 +52,7 @@ public class FeedFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), ElementoFeedAperto.class);
+                intent.putExtra("RowID", position);
                 startActivity(intent);
             }
         });
@@ -76,4 +80,7 @@ public class FeedFragment extends Fragment {
         return rootView;
     }
 
+    public static List<ElementoLista> getList() {
+        return list;
+    }
 }
