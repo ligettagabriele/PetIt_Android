@@ -19,6 +19,7 @@ public class FeedAndMapFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.petit_tabview_feed_and_map, container, false);
+        getFragmentManager().beginTransaction().replace(R.id.containerFragment, new MapFragment()).commit();
         tabLayout = rootView.findViewById(R.id.TabLayout);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -35,7 +36,6 @@ public class FeedAndMapFragment extends Fragment {
                         getFragmentManager().beginTransaction().replace(R.id.containerFragment, new FeedFragment()).commit();
                         break;
                 }
-
             }
 
             @Override

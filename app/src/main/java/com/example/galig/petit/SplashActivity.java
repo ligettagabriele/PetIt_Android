@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.galig.petit.PetItTESTS.v1.NavActivityTEST;
 import com.example.galig.petit.PetItTESTS.v1.login.LoginActivity;
+import com.example.galig.petit.tutorial.TutorialActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        startActivity(new Intent(this, TutorialActivity.class));
 
         finish();
     }

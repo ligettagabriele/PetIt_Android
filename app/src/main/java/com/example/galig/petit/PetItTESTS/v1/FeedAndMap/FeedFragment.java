@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -52,26 +53,7 @@ public class FeedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.petit_fragment_feed, container, false);
         listView = rootView.findViewById(R.id.feed_list);
-        /*---------------------------*/
-        dbHelper = new DbAdapter(getContext());
-        dbHelper.open();
-        cursor = dbHelper.fetchAllSegnalazioni();
 
-        cursor.moveToFirst();
-        while (!cursor.isClosed()) {
-            String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
-            String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
-            String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_POSIZIONE));
-            ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
-            list.add(elementoLista);
-            cursor.moveToNext();
-            if (cursor.isAfterLast()) {
-                break;
-            }
-        }
-        cursor.close();
-        dbHelper.close();
-        /*---------------------------*/
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
 
@@ -95,4 +77,37 @@ public class FeedFragment extends Fragment {
         return list;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        /*---------------------------*/
+        dbHelper = new DbAdapter(getContext());
+        dbHelper.open();
+        cursor = dbHelper.fetchAllSegnalazioni();
+
+        cursor.moveToFirst();
+        if (cursor.getCount() > 0) {
+            while (!cursor.isClosed()) {
+                String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+                String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+                String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_POSIZIONE));
+                ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
+                list.add(elementoLista);
+                cursor.moveToNext();
+                if (cursor.isAfterLast()) {
+                    break;
+                }
+            }
+            cursor.close();
+            dbHelper.close();
+        }
+        /*---------------------------*/
+
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        list.removeAll(list);
+    }
 }
