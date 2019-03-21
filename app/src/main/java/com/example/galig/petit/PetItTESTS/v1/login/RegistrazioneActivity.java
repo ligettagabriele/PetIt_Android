@@ -106,8 +106,6 @@ public class RegistrazioneActivity extends AppCompatActivity implements View.OnC
         });
 
 
-
-
         password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {

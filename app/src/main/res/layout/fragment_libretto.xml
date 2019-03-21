@@ -1,56 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/sfondo_app"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione">
+    tools:context=".PetItTESTS.v1.menu.LibrettoFragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5"
+        android:layout_weight="2.6"
         android:gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
 
-
             <ImageView
-                android:id="@+id/immagineProfilo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5sp"
-                android:src="@mipmap/ic_launcher_round" />
-
-            <TextView
-                android:id="@+id/nomeUtente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="6dp"
-                android:fontFamily="sans-serif"
-                android:text="Nome Utente"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="21sp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_libretto" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif"
-                android:text="latuaemail@email.com"
-                android:textSize="15dp" />
+                android:paddingLeft="5dp"
+                android:text="@string/libretto_sanitario"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,14 +73,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_modifica_impostazioni" />
+                        android:src="@drawable/ic_esami" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="@string/impostazioni"
+                        android:text="@string/esami_sverminazione"
                         android:textColor="@android:color/black" />
 
 
@@ -119,14 +106,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_logo" />
+                        android:src="@drawable/ic_patologie" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="@string/gestisciSegnalazioni"
+                        android:text="@string/patologie"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -151,14 +138,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_search_black_24dp" />
+                        android:src="@drawable/ic_interventi" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="@string/ricercaSegnalazioni"
+                        android:text="@string/interventi"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -183,14 +170,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_messaggi" />
+                        android:src="@drawable/ic_vaccinazioni" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="@string/messaggi"
+                        android:text="@string/vaccinazioni"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -215,14 +202,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_modifica_profilo" />
+                        android:src="@drawable/ic_allergie" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="@string/modificaProfilo"
+                        android:text="@string/allergie"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -247,14 +234,14 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_libretto" />
+                        android:src="@drawable/ic_peso" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:paddingLeft="20dp"
-                        android:text="Visualizza Libretto"
+                        android:text="@string/peso"
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>
@@ -263,6 +250,8 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+
+
 
 
 </LinearLayout>

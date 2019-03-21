@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         try {
-            Thread.sleep(3000L);
+            Thread.sleep(1500L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

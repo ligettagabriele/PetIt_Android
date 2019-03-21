@@ -62,6 +62,23 @@
     <string name="aggiungi_animale">Aggiungi Animale</string>
     <string name="attiva_notifiche">Attiva notifiche</string>
 
+    <!-- String menù segnalazioni -->
+    <string name="le_mie_segnalazioni">Le mie segnalazioni</string>
+    <string name="segnalazione_1">Simil Boxer Genova</string>
+    <string name="segnalazione_2">Border Collie Roma</string>
+    <string name="segnalazione_3">Meticcio Milano</string>
+    <string name="segnalazione_4">Pastore Tedesco Milano</string>
+
+    <!-- String menù libretto -->
+    <string name="libretto_sanitario">Libretto Sanitario Animale</string>
+    <string name="esami_sverminazione">Esami/Sverminazione</string>
+    <string name="patologie">Patologie</string>
+    <string name="interventi">Inteventi</string>
+    <string name="vaccinazioni">Vaccinazioni</string>
+    <string name="allergie">Allergie</string>
+    <string name="peso">peso</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
