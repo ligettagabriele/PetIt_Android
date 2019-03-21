@@ -48,10 +48,19 @@
 
     <!-- String menù impostazioni -->
     <string name="impostazioni">Modifica Impostazioni</string>
-    <string name="modifica_nome">Modifica Nome</string>
-    <string name="modifica_password">Modifica Password</string>
+    <string name="modifica_impostazione1">Modifica impostazione1</string>
+    <string name="modifica_impostazione2">Modifica impostazione2</string>
     <string name="attiva_localizzazione">Attiva localizzazione</string>
     <string name="impostazione_da_definire">Impostazione XXX</string>
+
+    <!-- String menù profilo -->
+    <string name="profilo">Modifica Profilo</string>
+    <string name="modifica_username">Modifica Username</string>
+    <string name="modifica_password">Modifica Password</string>
+    <string name="modifica_email">Modifica Email</string>
+    <string name="aggiungi_telefono">Aggiungi Telefono</string>
+    <string name="aggiungi_animale">Aggiungi Animale</string>
+    <string name="attiva_notifiche">Attiva notifiche</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

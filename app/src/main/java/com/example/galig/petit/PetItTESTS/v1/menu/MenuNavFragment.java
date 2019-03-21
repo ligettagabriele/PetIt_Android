@@ -28,6 +28,10 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
 
         modificaImpostazioni.setOnClickListener(this);
 
+        LinearLayout modificaProfilo = (LinearLayout) myView.findViewById(R.id.aggiorna_profilo);
+
+        modificaProfilo.setOnClickListener(this);
+
         return myView;
     }
 
@@ -37,6 +41,9 @@ public class MenuNavFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.modifica_impostazioni:
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModificaImpostazioniFragment()).commit();
+                break;
+            case R.id.aggiorna_profilo:
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModificaProfilo()).commit();
                 break;
 
 

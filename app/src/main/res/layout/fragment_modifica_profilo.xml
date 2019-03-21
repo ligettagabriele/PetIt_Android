@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/sfondo_app"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".PetItTESTS.v1.segnalazioni.main.AggiungiSegnalazione">
+    tools:context=".PetItTESTS.v1.menu.ModificaProfilo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,13 +25,13 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_modifica_impostazioni" />
+                android:src="@drawable/ic_modifica_profilo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:text="@string/impostazioni"
+                android:text="@string/modificaProfilo"
                 android:textColor="@android:color/black"
                 android:textSize="26sp" />
 
@@ -64,7 +64,7 @@
 
                         <TextView
                             style="@style/TextViewSettingsStyle"
-                            android:text="@string/modifica_impostazione1" />
+                            android:text="@string/modifica_username" />
 
                         <ImageView
                             android:layout_width="0dp"
@@ -85,7 +85,7 @@
 
                         <TextView
                             style="@style/TextViewSettingsStyle"
-                            android:text="@string/modifica_impostazione2" />
+                            android:text="@string/modifica_email" />
 
                         <ImageView
                             android:layout_width="0dp"
@@ -106,7 +106,82 @@
 
                         <TextView
                             style="@style/TextViewSettingsStyle"
-                            android:text="@string/attiva_localizzazione" />
+                            android:text="@string/modifica_password" />
+
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout style="@style/LayoutStyleSettings">
+
+                        <TextView
+                            style="@style/TextViewSettingsStyle"
+                            android:text="@string/aggiungi_telefono" />
+
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout style="@style/LayoutStyleSettings">
+
+                        <TextView
+                            style="@style/TextViewSettingsStyle"
+                            android:text="@string/aggiungi_animale" />
+
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <LinearLayout style="@style/LayoutStyleSettings">
+
+                        <TextView
+                            style="@style/TextViewSettingsStyle"
+                            android:text="@string/attiva_notifiche" />
 
 
                         <Switch
@@ -125,114 +200,6 @@
                         android:layout_gravity="bottom"
                         android:layout_marginHorizontal="15dp"
                         android:background="@android:color/darker_gray" />
-
-                    <LinearLayout style="@style/LayoutStyleSettings">
-
-                        <TextView
-                            style="@style/TextViewSettingsStyle"
-                            android:text="@string/impostazione_da_definire" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_arrow" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginHorizontal="15dp"
-                        android:background="@android:color/darker_gray" />
-
-                    <LinearLayout style="@style/LayoutStyleSettings">
-
-                        <TextView
-                            style="@style/TextViewSettingsStyle"
-                            android:text="@string/impostazione_da_definire" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_arrow" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginHorizontal="15dp"
-                        android:background="@android:color/darker_gray" />
-
-                    <LinearLayout style="@style/LayoutStyleSettings">
-
-                        <TextView
-                            style="@style/TextViewSettingsStyle"
-                            android:text="@string/impostazione_da_definire" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_arrow" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginHorizontal="15dp"
-                        android:background="@android:color/darker_gray" />
-
-                    <LinearLayout style="@style/LayoutStyleSettings">
-
-                        <TextView
-                            style="@style/TextViewSettingsStyle"
-                            android:text="@string/impostazione_da_definire" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_arrow" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginHorizontal="15dp"
-                        android:background="@android:color/darker_gray" />
-
-                    <LinearLayout style="@style/LayoutStyleSettings">
-
-                        <TextView
-                            style="@style/TextViewSettingsStyle"
-                            android:text="@string/impostazione_da_definire" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_arrow" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
