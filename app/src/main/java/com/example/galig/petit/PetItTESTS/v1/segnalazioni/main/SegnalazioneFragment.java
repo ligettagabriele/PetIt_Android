@@ -59,7 +59,6 @@ public class SegnalazioneFragment extends Fragment {
         immettiSegnalazione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //queste variabili memorizzano tutti i dati inseriti dall'utente
                 String nomeInserito = nome.getText().toString();
                 String posizioneInserita = posizione.getText().toString();

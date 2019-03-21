@@ -68,5 +68,6 @@
     <!-- navigationDrawer aperta o chiusa -->
     <string name="navigation_open">Navigation open</string>
     <string name="navigation_close">Navigation close</string>
+    <string name="nessuna_segnalazione">Nessuna segnalazione presente!</string>
 
 </resources>

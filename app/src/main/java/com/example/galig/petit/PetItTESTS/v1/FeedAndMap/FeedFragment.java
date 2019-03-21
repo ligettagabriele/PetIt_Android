@@ -50,6 +50,8 @@ public class FeedFragment extends Fragment {
         */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
         View rootView = inflater.inflate(R.layout.petit_fragment_feed, container, false);
         listView = rootView.findViewById(R.id.feed_list);
         /*---------------------------*/
@@ -58,19 +60,21 @@ public class FeedFragment extends Fragment {
         cursor = dbHelper.fetchAllSegnalazioni();
 
         cursor.moveToFirst();
-        while (!cursor.isClosed()) {
-            String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
-            String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
-            String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_POSIZIONE));
-            ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
-            list.add(elementoLista);
-            cursor.moveToNext();
-            if (cursor.isAfterLast()) {
-                break;
+        if (cursor.getCount() > 0) {
+            while (!cursor.isClosed()) {
+                String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+                String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+                String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_POSIZIONE));
+                ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
+                list.add(elementoLista);
+                cursor.moveToNext();
+                if (cursor.isAfterLast()) {
+                    break;
+                }
             }
+            cursor.close();
+            dbHelper.close();
         }
-        cursor.close();
-        dbHelper.close();
         /*---------------------------*/
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
