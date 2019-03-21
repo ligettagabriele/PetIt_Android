@@ -27,13 +27,6 @@
             android:id="@+id/nome_segnalazione"
             style="@style/FeedTextViewNome"
             android:text="Nome Segnalazione" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ciao" />
-
     </LinearLayout>
 
     <LinearLayout
