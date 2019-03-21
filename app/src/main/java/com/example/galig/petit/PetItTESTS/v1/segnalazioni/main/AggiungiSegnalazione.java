@@ -14,12 +14,14 @@ import com.example.galig.petit.database.DbAdapter;
 
 public class AggiungiSegnalazione extends AppCompatActivity {
 
+    private String nome;
     private String colorePelo;
     private String tipoPelo;
     private String taglia;
     private String statoFisico;
     private String statoMentale;
     private String note;
+    private String posizione;
 
 
     private DbAdapter dbHelper;
@@ -35,20 +37,23 @@ public class AggiungiSegnalazione extends AppCompatActivity {
         dbHelper.open();
         cursor = dbHelper.fetchAllSegnalazioni();
 
-        final EditText colorePeloET = (EditText) findViewById(R.id.colorePelo);
-        final Spinner tipoPeloET = (Spinner) findViewById(R.id.tipoPelo);
-        final Spinner tagliaSP = (Spinner) findViewById(R.id.taglia);
-        final Spinner statoFisicoET = (Spinner) findViewById(R.id.statoFisico);
-        final Spinner statoMentaleET = (Spinner) findViewById(R.id.statoMentale);
-        final EditText noteET = (EditText) findViewById(R.id.infoExtra);
-        //  ImageButton posizione = (ImageButton) findViewById(R.id.bottone_posizione);
-        Button inviaSegnalazione = (Button) findViewById(R.id.immettiSegnalazione);
+        final EditText nomeET = findViewById(R.id.nome);
+        final EditText colorePeloET = findViewById(R.id.colorePelo);
+        final Spinner tipoPeloET = findViewById(R.id.tipoPelo);
+        final Spinner tagliaSP = findViewById(R.id.taglia);
+        final Spinner statoFisicoET = findViewById(R.id.statoFisico);
+        final Spinner statoMentaleET = findViewById(R.id.statoMentale);
+        final EditText noteET = findViewById(R.id.infoExtra);
+        final EditText posizioneET = findViewById(R.id.posizione);
+        Button inviaSegnalazione = findViewById(R.id.immettiSegnalazione);
 
 
         inviaSegnalazione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                nome = nomeET.getText().toString();
+                posizione = posizioneET.getText().toString();
                 colorePelo = colorePeloET.getText().toString();
                 tipoPelo = tipoPeloET.getSelectedItem().toString();
                 taglia = tagliaSP.getSelectedItem().toString();
@@ -57,7 +62,7 @@ public class AggiungiSegnalazione extends AppCompatActivity {
                 note = noteET.getText().toString();
 
 
-                dbHelper.creaSegnalazione(colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
+                dbHelper.creaSegnalazione(nome, posizione, colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
 
 
                 Toast.makeText(AggiungiSegnalazione.this, taglia, Toast.LENGTH_SHORT).show();

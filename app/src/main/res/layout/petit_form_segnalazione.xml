@@ -71,6 +71,27 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/nomeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/posizione"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:text="Dai un nome alla segnalazione" />
+
+                    <EditText
+                        android:id="@+id/nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/posizioneTV"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:ems="15"
+                        android:hint="Gatto Perso"
+                        android:inputType="textPersonName"
+                        android:theme="@style/EditText" />
+
+                    <TextView
                         android:id="@+id/posizioneTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

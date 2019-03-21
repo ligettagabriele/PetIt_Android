@@ -1,5 +1,6 @@
 package com.example.galig.petit.PetItTESTS.v1.segnalazioni.main;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,8 +19,9 @@ import com.example.galig.petit.PetItTESTS.v1.NavActivityTEST;
 import com.example.galig.petit.R;
 import com.example.galig.petit.database.DbAdapter;
 
-public class SegnalazioneFragment extends Fragment implements View.OnClickListener {
+public class SegnalazioneFragment extends Fragment {
 
+    EditText nome;
     EditText posizione;
     EditText colorePelo;
     Spinner tipoPelo;
@@ -43,6 +45,7 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
         dbHelper.open();
         cursor = dbHelper.fetchAllSegnalazioni();
 
+        nome = myView.findViewById(R.id.nome);
         posizione = myView.findViewById(R.id.posizione);
         colorePelo = myView.findViewById(R.id.colorePelo);
         tipoPelo = myView.findViewById(R.id.tipoPelo);
@@ -53,44 +56,26 @@ public class SegnalazioneFragment extends Fragment implements View.OnClickListen
 
         immettiSegnalazione = myView.findViewById(R.id.immettiSegnalazione);
 
-        immettiSegnalazione.setOnClickListener(this);
+        immettiSegnalazione.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //queste variabili memorizzano tutti i dati inseriti dall'utente
+                String nomeInserito = nome.getText().toString();
+                String posizioneInserita = posizione.getText().toString();
+                String colorePeloInserito = colorePelo.getText().toString();
+                String tipoPeloInserito = tipoPelo.getSelectedItem().toString();
+                String statoFisicoInserito = statoFisico.getSelectedItem().toString();
+                String statoMentaleInserito = statoMentale.getSelectedItem().toString();
+                String noteAggiuntiveInserite = noteAggiuntive.getText().toString();
+                String tagliaScelta = taglia.getSelectedItem().toString();
+                // getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
+                dbHelper.creaSegnalazione(nomeInserito, posizioneInserita, colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
+            }
+        });
 
 
         return myView;
 
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        String posizioneInserita = posizione.getText().toString();
-        String colorePeloInserito = colorePelo.getText().toString();
-        String tipoPeloInserito = tipoPelo.getSelectedItem().toString();
-        String statoFisicoInserito = statoFisico.getSelectedItem().toString();
-        String statoMentaleInserito = statoMentale.getSelectedItem().toString();
-        String noteAggiuntiveInserite = noteAggiuntive.getText().toString();
-        String tagliaScelta = taglia.getSelectedItem().toString();
-
-        //queste variabili memorizzano tutti i dati inseriti dall'utente
-        //bisogna implementare la logica che le spedisca al DB
-
-        switch (v.getId()) {
-            case R.id.immettiSegnalazione:
-                //implementare logica DB
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
-                long resId = dbHelper.creaSegnalazione(colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
-                // deve passare la segnalazione alla classe FeedFragment , lo farà passando un id, quello della segnalazione inserita
-                // la classe FeedFragment leggerà la riga del Db tramite l'id che gli viene passato
-
-
-
-                Log.d("SegnalazioneFragment", "ID = " + resId);
-                break;
-            default:
-                break;
-        }
-
-
-        //logica per spedire i dati al db
     }
 }

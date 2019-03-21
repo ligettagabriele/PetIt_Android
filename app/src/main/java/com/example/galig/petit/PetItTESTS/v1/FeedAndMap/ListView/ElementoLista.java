@@ -6,6 +6,9 @@ public class ElementoLista {
     private String razzaSegnalazione;
     private String posizioneSegnalazione;
 
+    public ElementoLista() {
+    }
+
     public ElementoLista(String nomeSegnalazione, String razzaSegnalazione, String posizioneSegnalazione) {
         this.nomeSegnalazione = nomeSegnalazione;
         this.razzaSegnalazione = razzaSegnalazione;
