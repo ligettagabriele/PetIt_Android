@@ -71,6 +71,10 @@ public class FeedFragment extends Fragment {
             String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
             ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
             list.add(elementoLista);
+            cursor.moveToNext();
+            if (cursor.isAfterLast()) {
+                break;
+            }
         }
 
         cursor.close();
