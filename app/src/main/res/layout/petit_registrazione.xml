@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="sans-serif"
-            android:text="Inserisci idati"
+            android:text="Inserisci i dati"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="30sp" />
 
@@ -36,7 +36,7 @@
             android:layout_below="@id/selezione"
             android:layout_centerInParent="true"
             android:fontFamily="sans-serif"
-            android:text="per completare la regitrazione"
+            android:text="per completare la registrazione"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp" />
 

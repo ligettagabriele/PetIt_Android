@@ -1,4 +1,4 @@
-package com.example.galig.petit.entità;
+package com.example.galig.petit.dbroom.entità;
 
 import com.google.gson.annotations.SerializedName;
 
