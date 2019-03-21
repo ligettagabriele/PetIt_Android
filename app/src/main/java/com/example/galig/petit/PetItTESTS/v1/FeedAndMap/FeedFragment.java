@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView.CustomAdapter;
 import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView.ElementoFeedAperto;
@@ -28,6 +30,7 @@ public class FeedFragment extends Fragment {
     private ListView listView;
     private CustomAdapter customAdapter;
 
+
     private static List<ElementoLista> list = new LinkedList<ElementoLista>();
 
     static {
@@ -40,13 +43,18 @@ public class FeedFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         View rootView = inflater.inflate(R.layout.petit_fragment_feed, container, false);
-
         listView = rootView.findViewById(R.id.feed_list);
 
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
+
+
+
+        // deve prendere l'id che gli passa la classe SegnalazioneFragment
+        // deve estrarre la riga che è nel DB relativa a quell'id
+        // deve popolare i campi dei text view con la riga
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -54,6 +62,7 @@ public class FeedFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), ElementoFeedAperto.class);
                 intent.putExtra("RowID", position);
                 startActivity(intent);
+
             }
         });
 

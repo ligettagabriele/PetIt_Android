@@ -1,13 +1,17 @@
 package com.example.galig.petit.PetItTESTS.v1.FeedAndMap.ListView;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.galig.petit.PetItTESTS.v1.FeedAndMap.FeedFragment;
 import com.example.galig.petit.R;
+import com.example.galig.petit.database.DbAdapter;
 
 import java.util.List;
 
@@ -19,11 +23,46 @@ public class ElementoFeedAperto extends AppCompatActivity {
     private TextView pelo;
     private TextView colore;
 
+    private Button button;
+
+    private DbAdapter dbHelper;
+    private Cursor cursor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.petit_feed_item_open);
+
+        dbHelper = new DbAdapter(this);
+        dbHelper.open();
+        cursor = dbHelper.fetchAllSegnalazioni();
+
+
+
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*---------------------------------*/
+
+                cursor.moveToFirst();
+
+                while (cursor.moveToNext()) {
+                    Integer segnalazioneID = cursor.getInt(cursor.getColumnIndex((DbAdapter.KEY_ID)));
+                    String taglia = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
+                    Toast.makeText(ElementoFeedAperto.this, taglia, Toast.LENGTH_SHORT).show();
+                    Log.d("TAG", "contact id = " + segnalazioneID);
+                }
+
+                cursor.close();
+                dbHelper.close();
+
+                /*---------------------------------*/
+            }
+        });
+
 
         FeedFragment feedFragment = new FeedFragment();
         List<ElementoLista> list = FeedFragment.getList();
@@ -52,6 +91,7 @@ public class ElementoFeedAperto extends AppCompatActivity {
         nome.setText(c.getNomeSegnalazione());
         razza.setText(c.getRazzaSegnalazione());
         posizione.setText(c.getPosizioneSegnalazione());
+
 
     }
 }

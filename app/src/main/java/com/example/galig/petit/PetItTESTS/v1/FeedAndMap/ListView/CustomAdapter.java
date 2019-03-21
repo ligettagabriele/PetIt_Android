@@ -33,6 +33,7 @@ public class CustomAdapter extends ArrayAdapter<ElementoLista> {
         razzaSegnalazione.setText(c.getRazzaSegnalazione());
         posizioneSegnalazione.setText(c.getPosizioneSegnalazione());
 
+
         return convertView;
     }
 }
