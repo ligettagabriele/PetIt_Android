@@ -18,16 +18,16 @@
     <color name="bg_tutorial4">#00e6ac</color>
 
     <!-- PUNTI INATTIVI -->
-    <color name="dot_dark_tutorial1">#29a329</color>
-    <color name="dot_dark_tutorial2">#14a895</color>
+    <color name="dot_dark_tutorial1">#00994d</color>
+    <color name="dot_dark_tutorial2">#00994d</color>
     <color name="dot_dark_tutorial3">#00994d</color>
-    <color name="dot_dark_tutorial4">#00b386</color>
+    <color name="dot_dark_tutorial4">#00994d</color>
 
     <!-- dots active colors -->
-    <color name="dot_light_tutorial1">#8cff66</color>
-    <color name="dot_light_tutorial2">#8cf9eb</color>
-    <color name="dot_light_tutorial3">#1aff8c</color>
-    <color name="dot_light_tutorial4">#99ffe6</color>
+    <color name="dot_light_tutorial1">#FFFFFF</color>
+    <color name="dot_light_tutorial2">#FFFFFF</color>
+    <color name="dot_light_tutorial3">#FFFFFF</color>
+    <color name="dot_light_tutorial4">#FFFFFF</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_tutorial1</item>
