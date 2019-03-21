@@ -54,7 +54,7 @@ public class SegnalazioneFragment extends Fragment {
         statoMentale = myView.findViewById(R.id.statoMentale);
         noteAggiuntive = myView.findViewById(R.id.infoExtra);
 
-        immettiSegnalazione = myView.findViewById(R.id.immettiSegnalazione);
+        immettiSegnalazione = myView.findViewById(R.id.button_immetti);
 
         immettiSegnalazione.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +69,10 @@ public class SegnalazioneFragment extends Fragment {
                 String statoMentaleInserito = statoMentale.getSelectedItem().toString();
                 String noteAggiuntiveInserite = noteAggiuntive.getText().toString();
                 String tagliaScelta = taglia.getSelectedItem().toString();
-                // getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
                 dbHelper.creaSegnalazione(nomeInserito, posizioneInserita, colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
             }
         });
-
-
         return myView;
-
     }
 }

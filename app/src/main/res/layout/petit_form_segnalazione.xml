@@ -265,7 +265,7 @@
 
 
                     <Button
-                        android:id="@+id/immettiSegnalazione"
+                        android:id="@+id/button_immetti"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/infoExtra"
