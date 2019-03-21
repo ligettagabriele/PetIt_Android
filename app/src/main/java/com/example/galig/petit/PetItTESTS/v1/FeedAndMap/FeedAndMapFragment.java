@@ -7,12 +7,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.galig.petit.R;
 
 public class FeedAndMapFragment extends Fragment {
 
     TabLayout tabLayout;
+    long id;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -20,12 +22,21 @@ public class FeedAndMapFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.petit_tabview_feed_and_map, container, false);
 
-        tabLayout = (TabLayout) rootView.findViewById(R.id.TabLayout);
+        tabLayout = rootView.findViewById(R.id.TabLayout);
 
         // Begin the transaction
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.containerFragment, new MapFragment());
         ft.commit();
+
+        Bundle args = getArguments();
+        id = args.getLong("Id");
+
+
+        String string = "";
+        string += id;
+
+        Toast.makeText(getActivity(), string, Toast.LENGTH_SHORT).show();
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

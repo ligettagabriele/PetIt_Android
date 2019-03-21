@@ -38,9 +38,9 @@ public class ElementoFeedAperto extends AppCompatActivity {
         dbHelper.open();
         cursor = dbHelper.fetchAllSegnalazioni();
 
-
-
         button = findViewById(R.id.button);
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
