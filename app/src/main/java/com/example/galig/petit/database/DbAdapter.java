@@ -18,6 +18,8 @@ public class DbAdapter {
     public static final String DATABASE_TABLE = "segnalazioni";
 
     public static final String KEY_ID = "_id";
+    public static final String KEY_NOME = "nome";
+    public static final String KEY_POSIZIONE = "posizione";
     public static final String KEY_COLORE_PELO = "colorePelo";
     public static final String KEY_TIPO_PELO = "tipoPelo";
     public static final String KEY_TAGLIA = "taglia";
@@ -39,9 +41,11 @@ public class DbAdapter {
         dbHelper.close();
     }
 
-    private ContentValues createContentValues(String colorePelo, String tipoPelo, String taglia,
+    private ContentValues createContentValues(String nome, String posizione, String colorePelo, String tipoPelo, String taglia,
                                               String statoFisico, String statoMentale, String note) {
         ContentValues values = new ContentValues();
+        values.put(KEY_NOME, nome);
+        values.put(KEY_POSIZIONE, posizione);
         values.put(KEY_COLORE_PELO, colorePelo);
         values.put(KEY_TIPO_PELO, tipoPelo);
         values.put(KEY_TAGLIA, taglia);
@@ -53,22 +57,22 @@ public class DbAdapter {
     }
 
     //rimettere private
-    public long creaSegnalazione(String colorePelo, String tipoPelo, String taglia,
+    public long creaSegnalazione(String nome, String posizione, String colorePelo, String tipoPelo, String taglia,
                                  String statoFisico, String statoMentale, String note) {
-        ContentValues initialValues = createContentValues(colorePelo, tipoPelo, taglia,
+        ContentValues initialValues = createContentValues(nome, posizione, colorePelo, tipoPelo, taglia,
                 statoFisico, statoMentale, note);
         return database.insertOrThrow(DATABASE_TABLE, null, initialValues);
     }
 
     public Cursor fetchAllSegnalazioni() {
-        return database.query(DATABASE_TABLE, new String[]{KEY_ID, KEY_COLORE_PELO, KEY_TIPO_PELO, KEY_TAGLIA,
+        return database.query(DATABASE_TABLE, new String[]{KEY_ID, KEY_NOME , KEY_POSIZIONE , KEY_COLORE_PELO, KEY_TIPO_PELO, KEY_TAGLIA,
                 KEY_STATO_FISICO, KEY_STATO_MENTALE, KEY_NOTE}, null, null, null, null, null);
     }
 
     //update a contact
-    public boolean aggiornaSegnalazione(long segnalazioneID, String colorePelo, String tipoPelo, String taglia,
+    public boolean aggiornaSegnalazione(long segnalazioneID, String nome, String posizione, String colorePelo, String tipoPelo, String taglia,
                                         String statoFisico, String statoMentale, String note) {
-        ContentValues updateValues = createContentValues(colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
+        ContentValues updateValues = createContentValues(nome, posizione, colorePelo, tipoPelo, taglia, statoFisico, statoMentale, note);
         return database.update(DATABASE_TABLE, updateValues, KEY_ID + "=" + segnalazioneID,
                 null) > 0;
     }

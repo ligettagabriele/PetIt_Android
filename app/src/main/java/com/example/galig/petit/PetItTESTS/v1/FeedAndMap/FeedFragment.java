@@ -52,23 +52,16 @@ public class FeedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.petit_fragment_feed, container, false);
         listView = rootView.findViewById(R.id.feed_list);
-
-        // List<ElementoLista> list = new LinkedList<>();
-
-
-        // deve prendere l'id che gli passa la classe SegnalazioneFragment
-        // deve estrarre la riga che è nel DB relativa a quell'id
-        // deve popolare i campi dei text view con la riga
+        /*---------------------------*/
         dbHelper = new DbAdapter(getContext());
         dbHelper.open();
         cursor = dbHelper.fetchAllSegnalazioni();
 
         cursor.moveToFirst();
-
         while (!cursor.isClosed()) {
-            String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
-            String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
-            String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
+            String nome = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+            String razza = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_NOME));
+            String posizione = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_POSIZIONE));
             ElementoLista elementoLista = new ElementoLista(nome, razza, posizione);
             list.add(elementoLista);
             cursor.moveToNext();
@@ -76,10 +69,9 @@ public class FeedFragment extends Fragment {
                 break;
             }
         }
-
         cursor.close();
         dbHelper.close();
-
+        /*---------------------------*/
         customAdapter = new CustomAdapter(getActivity(), R.layout.petit_feed_item, list);
         listView.setAdapter(customAdapter);
 
@@ -94,69 +86,13 @@ public class FeedFragment extends Fragment {
             }
         });
 
-        /*
-
-        dbHelper = new DbAdapter(getContext());
-        dbHelper.open();
-        cursor = dbHelper.fetchAllSegnalazioni();
-
-        cursor.moveToFirst();
-
-        while (cursor.moveToNext()) {
-            Integer segnalazioneID = cursor.getInt(cursor.getColumnIndex((DbAdapter.KEY_ID)));
-            String taglia = cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_TAGLIA));
-            Toast.makeText(getActivity(), taglia, Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "contact id = " + segnalazioneID);
-        }
-
-        cursor.close();
-        dbHelper.close();
-
-        */
 
         return rootView;
     }
-/*
-    @Override
-    public void onStart() {
-        super.onStart();
-        Bundle args = getArguments();
-        if (args != null) {
-            id = args.getLong("Id");
-        }
-    } */
+
 
     public static List<ElementoLista> getList() {
         return list;
     }
 
-
-  /*  private List<ElementoLista> getResults() {
-
-
-        dbHelper = new DbAdapter(getContext());
-        dbHelper.open();
-
-        List<ElementoLista> resultList = new LinkedList<>();
-
-
-        Cursor c = dbHelper.fetchAllSegnalazioni(); //function to retrieve all values from a table- written in MyDb.java file
-        while (c.moveToNext()) {
-            String date = c.getString(c.getColumnIndex("taglia"));
-
-            try {
-                ElementoLista elementoLista = new ElementoLista();
-                elementoLista.setNomeSegnalazione(date);// setDate function is written in Class file
-                resultList.add(elementoLista);
-            } catch (Exception e) {
-                Log.e(TAG, "Error " + e.toString());
-            }
-
-        }
-
-        c.close();
-
-        dbHelper.close();
-        return resultList;
-    } */
 }

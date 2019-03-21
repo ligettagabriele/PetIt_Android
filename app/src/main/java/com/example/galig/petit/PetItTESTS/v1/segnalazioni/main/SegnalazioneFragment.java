@@ -21,6 +21,7 @@ import com.example.galig.petit.database.DbAdapter;
 
 public class SegnalazioneFragment extends Fragment {
 
+    EditText nome;
     EditText posizione;
     EditText colorePelo;
     Spinner tipoPelo;
@@ -44,6 +45,7 @@ public class SegnalazioneFragment extends Fragment {
         dbHelper.open();
         cursor = dbHelper.fetchAllSegnalazioni();
 
+        nome = myView.findViewById(R.id.nome);
         posizione = myView.findViewById(R.id.posizione);
         colorePelo = myView.findViewById(R.id.colorePelo);
         tipoPelo = myView.findViewById(R.id.tipoPelo);
@@ -59,6 +61,7 @@ public class SegnalazioneFragment extends Fragment {
             public void onClick(View v) {
 
                 //queste variabili memorizzano tutti i dati inseriti dall'utente
+                String nomeInserito = nome.getText().toString();
                 String posizioneInserita = posizione.getText().toString();
                 String colorePeloInserito = colorePelo.getText().toString();
                 String tipoPeloInserito = tipoPelo.getSelectedItem().toString();
@@ -67,15 +70,7 @@ public class SegnalazioneFragment extends Fragment {
                 String noteAggiuntiveInserite = noteAggiuntive.getText().toString();
                 String tagliaScelta = taglia.getSelectedItem().toString();
                 // getFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessaggioFineSegnalazione()).commit();
-                long resId = dbHelper.creaSegnalazione(colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
-                // deve passare la segnalazione alla classe FeedFragment , lo farà passando un id, quello della segnalazione inserita
-                // la classe FeedFragment leggerà la riga del Db tramite l'id che gli viene passato
-                Intent intent = new Intent(getActivity().getBaseContext(),
-                        NavActivityTEST.class);
-                intent.putExtra("Id", resId);
-                getActivity().startActivity(intent);
-                Log.d("SegnalazioneFragment", "ID = " + resId);
-
+                dbHelper.creaSegnalazione(nomeInserito, posizioneInserita, colorePeloInserito, tipoPeloInserito, tagliaScelta, statoFisicoInserito, statoMentaleInserito, noteAggiuntiveInserite);
             }
         });
 

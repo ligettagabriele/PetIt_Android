@@ -18,27 +18,8 @@ public class FeedAndMapFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
         View rootView = inflater.inflate(R.layout.petit_tabview_feed_and_map, container, false);
-
         tabLayout = rootView.findViewById(R.id.TabLayout);
-
-        // Begin the transaction
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.containerFragment, new MapFragment());
-        ft.commit();
-
-        Bundle args = getArguments();
-        id = args.getLong("Id");
-
-
-        String string = "";
-        string += id;
-
-        Toast.makeText(getActivity(), string, Toast.LENGTH_SHORT).show();
-
-
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
